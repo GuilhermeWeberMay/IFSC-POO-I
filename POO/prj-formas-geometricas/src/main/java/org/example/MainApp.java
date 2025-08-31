@@ -6,6 +6,5 @@ package org.example;
         Triangulo triangulo = new Triangulo();
         // Intanciação do Quadrado
         Quadrado quadrado = new Quadrado();
-
     }
 }
