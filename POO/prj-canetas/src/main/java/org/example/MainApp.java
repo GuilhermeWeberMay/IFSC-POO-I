@@ -6,6 +6,7 @@ public class MainApp {
         c1.carga = 100;
         c1.tampada = true;
         c1.espessura = 0.07f;
+        // Inserção do objeto caneta
         Caneta c2 = new Caneta();
         c2.cor = "Verde";
         c2.carga = 100;
