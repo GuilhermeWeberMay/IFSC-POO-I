@@ -21,5 +21,6 @@ public class MainApp {
         System.out.println(c2.cor);
         System.out.println(c2.carga);
         System.out.println(c2.tampada);
+        System.out.println("===FIM===");
     }
 }
