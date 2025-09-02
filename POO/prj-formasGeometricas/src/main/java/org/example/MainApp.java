@@ -7,5 +7,9 @@ public class MainApp {
         Triangulo triangulo = new Triangulo();
         // Instanciação do Objeto Quadrado
         Quadrado quadrado = new Quadrado();
+
+        circulo.desenhar();
+        triangulo.desenhar();
+        quadrado.desenhar();
     }
 }
