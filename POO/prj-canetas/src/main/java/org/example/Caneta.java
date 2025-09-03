@@ -23,7 +23,7 @@ public class Caneta {
             System.out.println("Não pode escrever. A caneta está tampada.");
         }else{
             System.out.println("Pintando com caneta: "+ cor);
-            consumirCarga(1);
+            consumirCarga(2);
         }
     }
     public void tampar(){
