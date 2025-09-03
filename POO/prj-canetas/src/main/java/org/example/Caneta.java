@@ -4,7 +4,7 @@ public class Caneta {
     public String cor;
     public float espessura;
     public boolean tampada;
-    public int carga;
+    public int carga = 100;
     public Caneta(String cor, float espessura, boolean tampada) {
         this.cor = cor;
         this.espessura = espessura;
@@ -32,7 +32,7 @@ public class Caneta {
     }
     public void destampar(){
         tampada = false;
-        System.out.println("Caneta tampada");
+        System.out.println("Caneta destampada");
     }
     public String getCor() {
         return cor;
