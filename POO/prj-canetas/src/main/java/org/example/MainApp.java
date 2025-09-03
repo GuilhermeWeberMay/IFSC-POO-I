@@ -39,9 +39,9 @@ public class MainApp {
         System.out.println("Cor da caneta: "+canetaVermelha.getCor());
         System.out.println("Espessura da caneta: "+canetaVermelha.getEspessura());
         System.out.println("Carga da caneta: "+canetaVermelha.getCarga());
-        canetaAzul.escrever("Olá mundo!");
+        canetaAzul.pintar();
         canetaAzul.destampar();
-        canetaAzul.escrever("Olá mundo!");
+        canetaAzul.pintar();
         canetaAzul.tampar();
         System.out.println("Carga da caneta: "+canetaVermelha.getCarga());
     }
