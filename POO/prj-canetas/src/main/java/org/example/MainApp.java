@@ -1,6 +1,7 @@
 package org.example;
 public class MainApp {
     public static void main(String[] args) {
+        /* Aula 01
         Caneta c1 = new Caneta();
         c1.cor = "Azul";
         c1.carga = 100;
@@ -21,6 +22,18 @@ public class MainApp {
         System.out.println(c2.cor);
         System.out.println(c2.carga);
         System.out.println(c2.tampada);
-        System.out.println("===FIM===");
+        System.out.println("===FIM===");*/
+
+        Caneta canetaAzul = new Caneta("Azul", 0.7f, true);
+        Caneta canetaVermelha = new Caneta("Vermelha", 0.5f, true);
+
+        System.out.println("Cor da caneta: "+canetaAzul.getCor());
+        System.out.println("Espessura da caneta: "+canetaAzul.getEspessura());
+        System.out.println("Carga da caneta: "+canetaAzul.getCarga());
+        canetaAzul.escrever("Olá mundo!");
+        canetaAzul.destampar();
+        canetaAzul.escrever("Olá mundo!");
+        canetaAzul.tampar();
+        System.out.print("Carga da caneta: "+canetaAzul.getCarga());
     }
 }
