@@ -8,6 +8,6 @@ public class MainApp {
         livro2.setPrecoCusto(10);
         System.out.println(livro2.getPrecoCusto());
         System.out.println(livro2.getMargemLucro()); // está apresentando a margem de lucro 0.02
-        System.out.println(livro.getPrecoVenda());
+        livro.getPrecoVenda();
     }
 }
