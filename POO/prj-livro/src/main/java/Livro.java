@@ -22,7 +22,6 @@ public class Livro {
         this.autor = autor;
         this.editora = editora;
         this.precoCusto = precoCusto;
-        this.precoVenda = precoVenda;
     }
 
     // Métodos getter's e setter's dos atributos
@@ -73,15 +72,15 @@ public class Livro {
         this.precoCusto = precoCusto;
     }
 
-    public void getPrecoVenda(){
-        return calcularPrecoVenda(precoCusto);
-    }
-    public void setPrecoVenda(float precoVenda){
-        this.precoVenda = precoVenda;
+    public float getPrecoVenda(){
+        return calcularPrecoVenda(getPrecoCusto());
     }
 
     public float getMargemLucro(){
         return margemLucro;
+    }
+    public void setMargemLucro(float margemLucro){
+        this.margemLucro = margemLucro;
     }
 
     public float calcularPrecoVenda(float precoCusto){
