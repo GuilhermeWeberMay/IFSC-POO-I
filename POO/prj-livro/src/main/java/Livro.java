@@ -72,8 +72,8 @@ public class Livro {
         this.precoCusto = precoCusto;
     }
 
-    public void getPrecoVenda(){
-        calcularPrecoVenda();
+    public float getPrecoVenda(){
+        return calcularPrecoVenda();
     }
 
     public float getMargemLucro(){
@@ -84,7 +84,7 @@ public class Livro {
     }
 
     public float calcularPrecoVenda(){
-        //Não sei como faz
+        return
     }
 }
 

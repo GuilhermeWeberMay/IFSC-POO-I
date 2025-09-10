@@ -39,5 +39,19 @@ public class MainApp {
 //          public String getCor(){
 //            return cor;
 //        }
+
+//        Boas práticas
+//        PRIMEIRO os atributos
+//        SEGUNDO os costrutores
+//        TERCEIRO os metodos operacionais getter's e setter's
+
+//        public void setCarga(int carga){
+//           if (carga >= 0 && carga <= 100){
+//             this.carga = carga;
+//            }else{
+//               new runtimeException ("Carga indesejada");
+//             }
+//        }
+//        classes de dominio de aplicação nao tem system.out.print
     }
 }
