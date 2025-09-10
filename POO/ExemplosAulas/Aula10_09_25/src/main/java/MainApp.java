@@ -14,15 +14,15 @@ public class MainApp {
 //          public Caneta(String cor, float espessura){
 //            this.cor = cor;
 //            this.espessura = cor
-//        }
+//          }
 //       Pode ter mais de um método construtor com todos os atributos ou somente alguns
 //          public Caneta(String cor){
 //            this.cor = cor;
-//       }
+//          }
 //       Não é possivel fazer uma sobrecarga de um objeto com o mesmo tipo de variavel primitiva
 //       Construtor Padrão do Java - sem inicializar nenhuma regra de negócio
-//           public Caneta(){
+//          public Caneta(){
 //             //Vazio
-//        }
+//          }
     }
 }
