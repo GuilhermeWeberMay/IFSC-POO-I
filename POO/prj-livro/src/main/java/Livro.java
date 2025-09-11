@@ -5,9 +5,9 @@ public class Livro {
     private String isbn;
     private String autor;
     private String editora;
-    private float precoCusto = 4;
+    private float precoCusto;
     private float precoVenda;
-    private float margemLucro = 0.2f;
+    private int margemLucro = 20;
 
     // Métodos do objeto - o que o objeto FAZ
     public Livro(){
@@ -79,12 +79,12 @@ public class Livro {
     public float getMargemLucro(){
         return margemLucro;
     }
-    public void setMargemLucro(float margemLucro){
+    public void setMargemLucro(int margemLucro){
         this.margemLucro = margemLucro;
     }
 
     public float calcularPrecoVenda(){
-        return
+        return precoCusto + (precoCusto * (margemLucro/100));
     }
 }
 
