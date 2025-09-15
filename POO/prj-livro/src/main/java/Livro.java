@@ -7,7 +7,7 @@ public class Livro {
     private String editora;
     private float precoCusto;
     private float precoVenda;
-    private int margemLucro = 20;
+    private float margemLucro;
 
     // Métodos do objeto - o que o objeto FAZ
     public Livro(){
@@ -22,6 +22,11 @@ public class Livro {
         this.autor = autor;
         this.editora = editora;
         this.precoCusto = precoCusto;
+    }
+    // Método construtor com somente margem lucro e preco custo
+    public Livro(float precoCusto, float margemLucro){
+        this.precoCusto = precoCusto;
+        this.margemLucro = margemLucro;
     }
 
     // Métodos getter's e setter's dos atributos
@@ -84,7 +89,7 @@ public class Livro {
     }
 
     public float calcularPrecoVenda(){
-        return precoCusto + (precoCusto * (margemLucro/100));
+        return precoCusto + (precoCusto * margemLucro);
     }
 }
 
