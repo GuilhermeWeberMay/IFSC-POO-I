@@ -15,13 +15,14 @@ public class Livro {
     }
     // Sobrecarga do método construtor - com parametro para os atributos
     public Livro(int id, String titulo, String isbn, String autor, String editora,
-                 float precoCusto, float precoVenda){
+                 float precoCusto, float margemLucro){
         this.id = id;
         this.titulo = titulo;
         this.isbn = isbn;
         this.autor = autor;
         this.editora = editora;
         this.precoCusto = precoCusto;
+        this.margemLucro = margemLucro;
     }
     // Método construtor com somente margem lucro e preco custo
     public Livro(float precoCusto, float margemLucro){
