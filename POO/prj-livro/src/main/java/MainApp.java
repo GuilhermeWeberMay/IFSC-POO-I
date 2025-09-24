@@ -24,6 +24,5 @@ public class MainApp {
         System.out.println("Preço de custo do livro: "+livro2.getPrecoCusto());
         System.out.println("Margem de lucro do livro: "+livro2.getMargemLucro());
         System.out.println("Preço de venda do livro: "+livro2.getPrecoVenda());
-
     }
 }
