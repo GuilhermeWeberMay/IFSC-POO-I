@@ -63,5 +63,15 @@ public class Cliente {
         veiculo.setCliente(null);
     }
 
-
+    @Override
+    public String toString() {
+        return "Cliente{" +
+                "id=" + id +
+                ", nome='" + nome + '\'' +
+                ", celular='" + celular + '\'' +
+                ", email='" + email + '\'' +
+                ", dataCadastro=" + dataCadastro +
+                ", veiculos=" + veiculos +
+                '}';
+    }
 }

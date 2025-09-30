@@ -56,4 +56,14 @@ public class Veiculo {
         this.cliente = cliente;
     }
 
+    @Override
+    public String toString() {
+        return "Veiculo{" +
+                "id=" + id +
+                ", placa='" + placa + '\'' +
+                ", observacao='" + observacao + '\'' +
+                ", cor=" + cor +
+                ", cliente=" + cliente +
+                '}';
+    }
 }
