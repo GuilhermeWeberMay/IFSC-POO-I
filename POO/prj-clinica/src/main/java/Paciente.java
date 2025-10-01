@@ -1,6 +1,7 @@
 public class Paciente {
     private String nome;
     private String cpf;
+    private Endereco endereco;
 
     public Paciente(String nome, String cpf) {
         this.nome = nome;
@@ -19,5 +20,12 @@ public class Paciente {
     }
     public void setCpf(String cpf) {
         this.cpf = cpf;
+    }
+
+    public Endereco getEndereco() {
+        return endereco;
+    }
+    public void adicionarEndereco() {
+
     }
 }
