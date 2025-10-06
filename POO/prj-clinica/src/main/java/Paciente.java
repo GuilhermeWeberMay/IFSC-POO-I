@@ -3,9 +3,13 @@ public class Paciente {
     private String cpf;
     private Endereco endereco;
 
-    public Paciente(String nome, String cpf) {
+    public Paciente(String nome, String cpf, String rua, Cidade cidade) {
         this.nome = nome;
         this.cpf = cpf;
+        this.endereco = new Endereco(rua, cidade);
+    }
+
+    public Paciente() {
     }
 
     public String getNome() {
@@ -25,7 +29,16 @@ public class Paciente {
     public Endereco getEndereco() {
         return endereco;
     }
-    public void adicionarEndereco() {
+    public void addEndereco(String rua, Cidade cidade) {
+        Endereco endereco = new Endereco(rua, cidade);
+    }
 
+    @Override
+    public String toString() {
+        return "Paciente{" +
+                "nome='" + nome + '\'' +
+                ", cpf='" + cpf + '\'' +
+                ", endereco=" + endereco +
+                '}';
     }
 }

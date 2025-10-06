@@ -7,9 +7,6 @@ public class Endereco {
         this.rua = rua;
         this.cidade = cidade;
     }
-    public Endereco(){
-
-    }
 
     public Cidade getCidade(){
         return this.cidade;
@@ -23,5 +20,13 @@ public class Endereco {
     }
     public void setRua(String rua){
         this.rua = rua;
+    }
+
+    @Override
+    public String toString() {
+        return "Endereco{" +
+                "rua='" + rua + '\'' +
+                ", cidade=" + cidade +
+                '}';
     }
 }

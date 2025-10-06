@@ -52,5 +52,14 @@ public class Medico {
         this.crm = crm;
     }
 
-
+    @Override
+    public String toString() {
+        return "Medico{" +
+                "nome='" + nome + '\'' +
+                ", cpf='" + cpf + '\'' +
+                ", especialidade='" + especialidade + '\'' +
+                ", crm='" + crm + '\'' +
+                ", listaDeConsultas=" + listaDeConsultas +
+                '}';
+    }
 }

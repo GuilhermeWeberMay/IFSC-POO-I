@@ -5,13 +5,15 @@ public class Consulta {
     private Medico medico;
     // Associação da classe Paciente no objeto Consulta - Associação Unidirecional
     private Paciente paciente;
+    private EPrioridade prioridade;
 
 
-    public Consulta(String dataConsulta, String horario, Medico medico, Paciente paciente) {
+    public Consulta(String dataConsulta, String horario, Medico medico, Paciente paciente, EPrioridade prioridade) {
         this.dataConsulta = dataConsulta;
         this.horario = horario;
         this.medico = medico;
         this.paciente = paciente;
+        this.prioridade = prioridade;
     }
 
     public Medico getMedico() {
@@ -42,4 +44,21 @@ public class Consulta {
         this.dataConsulta = dataConsulta;
     }
 
+    public EPrioridade getPrioridade() {
+        return prioridade;
+    }
+    public void setPrioridade(EPrioridade prioridade) {
+        this.prioridade = prioridade;
+    }
+
+    @Override
+    public String toString() {
+        return "Consulta{" +
+                "dataConsulta='" + dataConsulta + '\'' +
+                ", horario='" + horario + '\'' +
+                ", medico=" + medico +
+                ", paciente=" + paciente +
+                ", prioridade=" + prioridade +
+                '}';
+    }
 }
