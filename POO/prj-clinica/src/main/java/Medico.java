@@ -52,6 +52,14 @@ public class Medico {
         this.crm = crm;
     }
 
+    public void apresentarMedico(Consulta consulta){
+        for( Consulta : getListaDeConsultas()){
+            System.out.println(getNome());
+            System.out.println(getCrm());
+            System.out.println(getEspecialidade());
+        }
+    }
+
     @Override
     public String toString() {
         return "Medico{" +

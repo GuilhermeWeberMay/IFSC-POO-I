@@ -20,10 +20,12 @@ public class MainApp {
         System.out.println("Prioridade: " + consulta.getPrioridade().getDescricao());
         System.out.println("--------------------");
 
-        System.out.println(cidade);
-        System.out.println(endereco);
-        System.out.println(paciente);
-        System.out.println(medico);
-        System.out.println(consulta);
+        medico.apresentarMedico();
+
+//        System.out.println(cidade);
+//        System.out.println(endereco);
+//        System.out.println(paciente);
+//        System.out.println(medico);
+//        System.out.println(consulta);
     }
 }
