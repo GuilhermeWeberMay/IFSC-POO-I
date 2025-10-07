@@ -19,6 +19,6 @@ public class MainApp {
         System.out.println("Paciente..: " + consulta.getPaciente().getNome());
         System.out.println("Prioridade: " + consulta.getPrioridade().getDescricao());
         System.out.println("--------------------");
-        
+
     }
 }
