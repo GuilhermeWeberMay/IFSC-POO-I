@@ -19,13 +19,6 @@ public class MainApp {
         System.out.println("Paciente..: " + consulta.getPaciente().getNome());
         System.out.println("Prioridade: " + consulta.getPrioridade().getDescricao());
         System.out.println("--------------------");
-
-        medico.apresentarMedico();
-
-//        System.out.println(cidade);
-//        System.out.println(endereco);
-//        System.out.println(paciente);
-//        System.out.println(medico);
-//        System.out.println(consulta);
+        
     }
 }
