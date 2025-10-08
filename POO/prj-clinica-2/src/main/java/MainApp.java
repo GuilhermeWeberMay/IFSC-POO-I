@@ -28,21 +28,13 @@ public class MainApp {
         Cidade cidade2 = new Cidade("Curitiba", "PR");
         // FIM - Instanciação do objeto Cidade
 
-        // INICIO - Instanciação do objeto Endereco
-        Endereco endereco = new Endereco();
-        endereco.setRua("Rua Sete de Setembro");
-        endereco.setCidade(cidade);
-
-        Endereco endereco2 = new Endereco("Avenida Mauro Ramos", cidade2);
-        // FIM - Instanciação do objeto Endereco
-
         // INICIO - Instanciação do objeto Paciente
         Paciente paciente = new Paciente();
         paciente.setNome("Guilherme");
         paciente.setCpf("11111111111");
         paciente.addEndereco("Rua sete de Setembro", cidade);
 
-        Paciente paciente2 = new Paciente("Eduardo Gomes","33333333333", endereco2.getRua(), cidade2);
+        Paciente paciente2 = new Paciente("Eduardo Gomes","33333333333", "Rua Sete", cidade2);
         // FIM - Instanciação do objeto Paciente
 
 
@@ -102,6 +94,8 @@ public class MainApp {
         System.out.println("Consulta 2 "+ consulta2);
         System.out.println("Consulta 3 "+ consulta3);
         System.out.println("Consulta 4 "+ consulta4);
+
+        System.out.println(consulta2.getPaciente().getEndereco().getCidade().getNome());
 
 
 

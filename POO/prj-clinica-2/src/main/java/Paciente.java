@@ -33,8 +33,18 @@ public class Paciente {
     public Endereco getEndereco() {
         return endereco;
     }
+    // Pode mudar para atualizar endereco, para não criar um objeto em cima do outro
     public void addEndereco(String rua, Cidade cidade) {
         this.endereco = new Endereco(rua, cidade);
+    }
+    //Atualização
+    public void attEndereco(String rua, Cidade cidade) {
+        if (endereco != null) {
+            endereco.setRua(rua);
+            endereco.setCidade(cidade);
+        }else {
+            this.endereco = new Endereco(rua, cidade);
+        }
     }
 
     public List<Consulta> getConsultas() {
