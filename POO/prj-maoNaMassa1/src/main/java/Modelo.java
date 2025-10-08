@@ -1,49 +1,18 @@
 public class Modelo {
     private int id;
     private String descricao;
+    // Relacionamento uniderional com Marca
     private Marca marca;
+    // Relacionamento uniderional com ECategoria
+    ECategoria categoria;
+    // Relacionamento de Agreagção com Motor
+    private Motor motor;
 
-    public Modelo(){
+    public Modelo(int id, String descricao,Marca marca, Motor motor) {
         this.id = id;
         this.descricao = descricao;
         this.marca = marca;
+        this.motor = new Motor();
     }
 
-    public Modelo(String descricao, Marca marca){
-        this.descricao = descricao;
-        this.marca = marca;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public String getDescricao() {
-        return descricao;
-    }
-
-    public void setDescricao(String descricao) {
-        this.descricao = descricao;
-    }
-
-    public Marca getMarca() {
-        return marca;
-    }
-
-    public void setMarca(Marca marca) {
-        this.marca = marca;
-    }
-
-    @Override
-    public String toString() {
-        return "Modelo{" +
-                "id=" + id +
-                ", descricao='" + descricao + '\'' +
-                ", marca=" + marca +
-                '}';
-    }
 }
