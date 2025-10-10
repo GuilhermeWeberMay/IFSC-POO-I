@@ -8,11 +8,22 @@ public class Modelo {
     // Relacionamento de Agreagção com Motor
     private Motor motor;
 
-    public Modelo(int id, String descricao,Marca marca, Motor motor) {
+    public Modelo(int id, String descricao,Marca marca, ECategoria categoria, int potencia, ETipoCombustivel tipoCombustivel) {
         this.id = id;
         this.descricao = descricao;
         this.marca = marca;
-        this.motor = new Motor();
+        this.categoria = categoria;
+        this.motor = new Motor(potencia,tipoCombustivel);
     }
 
+    @Override
+    public String toString() {
+        return "Modelo{" +
+                "id=" + id +
+                ", descricao='" + descricao + '\'' +
+                ", marca=" + marca +
+                ", categoria=" + categoria +
+                ", motor=" + motor +
+                '}';
+    }
 }

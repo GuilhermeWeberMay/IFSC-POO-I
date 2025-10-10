@@ -9,6 +9,17 @@ public class Veiculo {
     // Relacionamento uniderional com Modelo
     private Modelo modelo;
     // Relacionamento multidirecional com Cliente
-    private List<Veiculo> listaVeiculos;
+    private Cliente cliente;
 
+    @Override
+    public String toString() {
+        return "Veiculo{" +
+                "id=" + id +
+                ", placa='" + placa + '\'' +
+                ", observacao='" + observacao + '\'' +
+                ", cor=" + cor +
+                ", modelo=" + modelo +
+                ", cliente=" + cliente +
+                '}';
+    }
 }
