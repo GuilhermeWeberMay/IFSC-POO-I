@@ -11,6 +11,15 @@ public class Veiculo {
     // Relacionamento multidirecional com Cliente
     private Cliente cliente;
 
+    public Veiculo(int id, String placa, String observacao, Cor cor, Modelo modelo, Cliente cliente) {
+        this.id = id;
+        this.placa = placa;
+        this.observacao = observacao;
+        this.cor = cor;
+        this.modelo = modelo;
+        this.cliente = cliente;
+    }
+
     public int getId() {
         return id;
     }

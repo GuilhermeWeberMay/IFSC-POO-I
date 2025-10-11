@@ -7,19 +7,15 @@ public class Cliente {
     private String nome;
     private String celular;
     private String email;
-    private LocalDate dataCadastro = LocalDate.now();
+    private LocalDate dataCadastro;
     private List<Veiculo> listaVeiculos;
 
-    public Cliente(int id, String nome, String celular, String email, LocalDate dataCadastro, List<Veiculo> listaVeiculos) {
+    public Cliente(int id, String nome, String celular, String email) {
         this.id = id;
         this.nome = nome;
         this.celular = celular;
         this.email = email;
-        this.dataCadastro = dataCadastro;
-        this.listaVeiculos = new ArrayList<Veiculo>();
-    }
-
-    public Cliente() {
+        this.dataCadastro = LocalDate.now();
     }
 
     public int getId() {
@@ -55,6 +51,13 @@ public class Cliente {
     }
     public void setDataCadastro(LocalDate dataCadastro) {
         this.dataCadastro = dataCadastro;
+    }
+
+    public List<Veiculo> getListaVeiculos() {
+        return listaVeiculos;
+    }
+    public void setListaVeiculos(List<Veiculo> listaVeiculos) {
+        this.listaVeiculos = listaVeiculos;
     }
 
     public void addVeiculo(Veiculo veiculo) {

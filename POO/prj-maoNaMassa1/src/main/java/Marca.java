@@ -10,8 +10,7 @@ public class Marca {
         this.nome = nome;
     }
     // Método construtor vazio
-    public Marca() {
-    }
+
 
     // Métodos GETTERS e SETTERS
     public int getId() {

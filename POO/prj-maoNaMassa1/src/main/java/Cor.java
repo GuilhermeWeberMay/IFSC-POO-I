@@ -11,8 +11,7 @@ public class Cor {
     }
 
     // Método construtor vazio
-    public Cor() {
-    }
+
 
     // Métodos getters e setters
     public int getId() {
