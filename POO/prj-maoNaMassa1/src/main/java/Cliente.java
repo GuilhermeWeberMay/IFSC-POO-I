@@ -8,7 +8,7 @@ public class Cliente {
     private String celular;
     private String email;
     private LocalDate dataCadastro;
-    private List<Veiculo> listaVeiculos;
+    private List<Veiculo> listaVeiculos =  new ArrayList<>();
 
     public Cliente(int id, String nome, String celular, String email) {
         this.id = id;
@@ -77,7 +77,6 @@ public class Cliente {
                 ", celular='" + celular + '\'' +
                 ", email='" + email + '\'' +
                 ", dataCadastro=" + dataCadastro +
-                ", listaVeiculos=" + listaVeiculos +
                 '}';
     }
 }

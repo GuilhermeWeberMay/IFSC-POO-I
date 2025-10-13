@@ -7,7 +7,10 @@ public class MainApp {
         Veiculo veiculo = new Veiculo(1,"SSF4B18","Nissan Versa", cor, modelo, cliente);
         veiculo.setModelo(modelo);
         cliente.addVeiculo(veiculo);
-        System.out.println(cliente.getListaVeiculos().get(0).getModelo().getMotor().getTipoCombustivel());
+        veiculo.setCliente(cliente);
+        System.out.println(cliente);
+        System.out.println("----------------------------");
+        System.out.println(veiculo);
 
 //        System.out.println(cor);
 //        System.out.println(veiculo);
