@@ -36,7 +36,7 @@ public class MainApp {
         Veiculo veiculo = new Veiculo(1,"SSF4B18","Nissan Versa", cor, modelo, cliente);
         Veiculo veiculo2 = new Veiculo(2,"GXP7D88","Esportivo importado", cor2, modelo2, cliente2);
         Veiculo veiculo3 = new Veiculo(3,"WDC8J14","Veículo premium", cor4, modelo3, cliente2);
-        Veiculo veiculo4 = new Veiculo(4,"MAY5G06","Motocicleta esportiva de alta cilindrada", cor4, modelo4, cliente);
+        Veiculo veiculo4 = new Veiculo(4,"MAY9G06","Motocicleta esportiva de alta cilindrada", cor4, modelo4, cliente);
 
         // Associando os cliente aos veiculos
         cliente.addVeiculo(veiculo); // Guilherme tem Versa
