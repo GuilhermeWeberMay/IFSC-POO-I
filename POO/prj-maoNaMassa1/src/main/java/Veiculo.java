@@ -1,5 +1,3 @@
-import java.util.List;
-
 public class Veiculo {
     private int id;
     private String placa;
