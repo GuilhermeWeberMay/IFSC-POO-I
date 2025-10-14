@@ -1,13 +1,12 @@
 public class MainApp {
     public static void print(Veiculo veiculo){
-        System.out.println("Cliente:"+veiculo.getCliente().getNome());
-        System.out.println("Placa..:"+veiculo.getPlaca());
-        System.out.println(veiculo.getObservacao());
-        System.out.println(veiculo.getCor().getNome());
-        System.out.println(veiculo.getModelo().getDescricao());
-        System.out.println(veiculo.getModelo().getMotor().getTipoCombustivel().getDescricao());
-        System.out.println(veiculo.getModelo().getCategoria().getDescricao());
-        System.out.println(veiculo.getModelo().getMarca().getNome());
+        System.out.println("Proprietario:"+veiculo.getCliente().getNome());
+        System.out.println("Placa.......:"+veiculo.getPlaca());
+        System.out.println("Cor.........:"+veiculo.getCor().getNome());
+        System.out.println("Veículo.....:"+veiculo.getModelo().getDescricao());
+        System.out.println("Combústivel.:"+veiculo.getModelo().getMotor().getTipoCombustivel().getDescricao());
+        System.out.println("Categoria...:"+veiculo.getModelo().getCategoria().getDescricao());
+        System.out.println("Marca.......:"+veiculo.getModelo().getMarca().getNome());
         System.out.println("-----------------------------------------------------------------------");
     }
     public static void main(String[] args) {
@@ -37,7 +36,7 @@ public class MainApp {
         Veiculo veiculo = new Veiculo(1,"SSF4B18","Nissan Versa", cor, modelo, cliente);
         Veiculo veiculo2 = new Veiculo(2,"GXP7D88","Esportivo importado", cor2, modelo2, cliente2);
         Veiculo veiculo3 = new Veiculo(3,"WDC8J14","Veículo premium", cor4, modelo3, cliente2);
-        Veiculo veiculo4 = new Veiculo(4,"SSF4B18","Motocicleta esportiva de alta cilindrada", cor4, modelo4, cliente);
+        Veiculo veiculo4 = new Veiculo(4,"MAY5G06","Motocicleta esportiva de alta cilindrada", cor4, modelo4, cliente);
 
         // Associando os cliente aos veiculos
         cliente.addVeiculo(veiculo); // Guilherme tem Versa
@@ -46,6 +45,7 @@ public class MainApp {
         cliente2.addVeiculo(veiculo3); // Guilherme tem S1000RR
 
         // Apresentaçao do veículo
+        System.out.println("Apresentação dos veículos e seus clientes:");
         print(veiculo);
         print(veiculo2);
         print(veiculo3);
