@@ -51,5 +51,8 @@ public class MainApp {
         print(veiculo3);
         print(veiculo4);
 
+        System.out.println("Verificação para ver se ligações estão corretas:");
+        System.out.println(cliente.getListaVeiculos().get(1).getModelo().getMarca().getNome());
+
     }
 }
