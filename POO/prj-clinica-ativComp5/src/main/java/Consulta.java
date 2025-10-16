@@ -5,6 +5,8 @@ public class Consulta {
     private EPrioridade prioridade;
     // Associação bidirecional com Paciente
     private Paciente paciente;
+    // Associação de agregação com Medico
+    private Medico medico;
 
     public Consulta(String data, String horario) {
         this.data = data;
@@ -41,5 +43,25 @@ public class Consulta {
     public Paciente getPaciente() {
         return paciente;
     }
+    public void setPaciente(Paciente paciente) {
+        this.paciente = paciente;
+    }
 
+    public Medico getMedico() {
+        return medico;
+    }
+    public void setMedico(Medico medico) {
+        this.medico = medico;
+    }
+
+    @Override
+    public String toString() {
+        return "Consulta{" +
+                "data='" + data + '\'' +
+                ", horario='" + horario + '\'' +
+                ", prioridade=" + prioridade +
+                ", paciente=" + paciente +
+                ", medico=" + medico +
+                '}';
+    }
 }

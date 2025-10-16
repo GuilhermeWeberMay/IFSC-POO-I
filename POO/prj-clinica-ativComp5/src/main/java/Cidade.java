@@ -20,4 +20,12 @@ public class Cidade {
     public void setUf(String uf) {
         this.uf = uf;
     }
+
+    @Override
+    public String toString() {
+        return "Cidade{" +
+                "nome='" + nome + '\'' +
+                ", uf='" + uf + '\'' +
+                '}';
+    }
 }

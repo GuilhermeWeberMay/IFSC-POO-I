@@ -29,4 +29,13 @@ public class Endereco {
     public void setCidade(Cidade cidade) {
         this.cidade = cidade;
     }
+
+    @Override
+    public String toString() {
+        return "Endereco{" +
+                "rua='" + rua + '\'' +
+                ", complemento='" + complemento + '\'' +
+                ", cidade=" + cidade +
+                '}';
+    }
 }
