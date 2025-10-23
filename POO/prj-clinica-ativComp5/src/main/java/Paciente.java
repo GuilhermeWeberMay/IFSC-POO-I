@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class Paciente extends Pessoa {
+public class Paciente extends Pessoa implements IAgendavel {
     private String contato;
     // Associação de composição com Endereco
     private Endereco endereco;
@@ -27,25 +27,17 @@ public class Paciente extends Pessoa {
     // Não teremos setEndereco se não quebramos a regra de negócio,
     // que endereco é necessario ser instancia na classe Paciente
 
-    public void agendarConsulta(Consulta consulta){
-        this.listaConsultas.add(consulta);
-        consulta.setPaciente(this);
-    }
-
     public void exibirInformacoes(){
         super.exibirInformacoes();
         System.out.println("Contato: " + this.getContato());
         System.out.println("Rua: " + this.getEndereco().getRua());
         System.out.println("Cidade: " + this.getEndereco().getCidade().getNome());
-        System.out.println("Cidade: " + this.getEndereco().getCidade().getUf());
+        System.out.println("Uf: " + this.getEndereco().getCidade().getUf());
     }
 
     @Override
-    public String toString() {
-        return "Paciente{" +
-                super.toString() +
-                "endereco=" + endereco +
-                ", contato='" + contato + '\'' +
-                '}';
+    public void agendarConsulta(Consulta consulta) {
+        this.listaConsultas.add(consulta);
+        consulta.setPaciente(this);
     }
 }

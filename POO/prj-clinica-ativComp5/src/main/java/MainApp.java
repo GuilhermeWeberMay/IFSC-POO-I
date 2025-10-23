@@ -16,5 +16,10 @@ public class MainApp {
         medico.exibirInformacoes();
         System.out.println("===================");
         paciente.exibirInformacoes();
+
+        medico.agendarConsulta(consulta);
+        paciente.agendarConsulta(consulta);
+
+        System.out.println(consulta);
     }
 }

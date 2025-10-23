@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class Medico extends Pessoa{
+public class Medico extends Pessoa implements IAgendavel{
     private String especialidade;
     private String crm;
     // Associação bidirecional com Consulta
@@ -26,11 +26,6 @@ public class Medico extends Pessoa{
         this.crm = crm;
     }
 
-    public void agendarConsulta(Consulta consulta){
-        this.listaConsultas.add(consulta);
-        consulta.setMedico(this);
-    }
-
     public void exibirInformacoes(){
         super.exibirInformacoes();
         System.out.println("Especialidade: " + this.getEspecialidade());
@@ -38,11 +33,8 @@ public class Medico extends Pessoa{
     }
 
     @Override
-    public String toString() {
-        return "Medico{" +
-                super.toString() +
-                "especialidade='" + especialidade + '\'' +
-                ", crm='" + crm + '\'' +
-                '}';
+    public void agendarConsulta(Consulta consulta){
+        this.listaConsultas.add(consulta);
+        consulta.setMedico(this);
     }
 }
