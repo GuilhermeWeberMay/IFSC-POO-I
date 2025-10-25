@@ -1,4 +1,5 @@
 public class Consulta {
+    // Atributos
     private String data;
     private String horario;
     // Associação unidirecional com Prioridade
@@ -8,6 +9,7 @@ public class Consulta {
     // Associação de agregação com Medico
     private Medico medico;
 
+    // Construtores
     public Consulta(String data, String horario) {
         this.data = data;
         this.horario = horario;
@@ -19,6 +21,7 @@ public class Consulta {
         this.prioridade = prioridade;
     }
 
+    // Métodos de acesso - getters e setters
     public String getData() {
         return data;
     }
