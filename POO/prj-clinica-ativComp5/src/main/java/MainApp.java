@@ -33,6 +33,7 @@ public class MainApp {
         paciente1.exibirInformacoes();
         System.out.println();
 
+        // Apresentação das informações da consulta
         System.out.println("Informações das consultas: ");
         System.out.println(consulta);
         System.out.println(consulta1);
