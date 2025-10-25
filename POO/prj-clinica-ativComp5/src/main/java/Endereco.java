@@ -1,14 +1,17 @@
 public class Endereco {
+    // Atributos
     private String rua;
     private String complemento;
     // Relacionamento unidirecional com Cidade
     private Cidade cidade;
 
+    // Construtores
     public Endereco(String rua, Cidade cidade) {
         this.rua = rua;
         this.cidade = cidade;
     }
 
+    // Métodos de acesso - getters e setters
     public String getRua() {
         return rua;
     }
