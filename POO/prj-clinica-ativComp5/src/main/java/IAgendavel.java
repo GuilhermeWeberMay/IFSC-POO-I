@@ -1,3 +1,3 @@
 public interface IAgendavel {
-    public void agendarConsulta(Consulta consulta);
+    void agendarConsulta(Consulta consulta);
 }
