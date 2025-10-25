@@ -28,6 +28,11 @@ public class Paciente extends Pessoa implements IAgendavel {
     // Não teremos setEndereco se não quebramos a regra de negócio,
     // que endereco é necessario ser instancia na classe Paciente
 
+    public List<Consulta> getListaConsultas() {
+        return listaConsultas;
+    }
+    // Não teremos um setLista pois temos o método agendarConsulta que é responsavel por isso
+
     // Métodos
     public void exibirInformacoes(){
         super.exibirInformacoes();
