@@ -1,17 +1,20 @@
 import java.util.*;
 
 public class Medico extends Pessoa implements IAgendavel{
+    // Atributos
     private String especialidade;
     private String crm;
-    // Associação bidirecional com Consulta
+    // Associação de agregação com Consulta
     List<Consulta> listaConsultas =  new ArrayList<>();
 
+    // Construtores
     public Medico(String nome, String cpf, String especialidade, String crm){
         super(nome, cpf);
         this.especialidade = especialidade;
         this.crm = crm;
     }
 
+    // Métodos de acesso - getters e setters
     public String getEspecialidade() {
         return especialidade;
     }
@@ -26,12 +29,14 @@ public class Medico extends Pessoa implements IAgendavel{
         this.crm = crm;
     }
 
+    // Métodos
     public void exibirInformacoes(){
         super.exibirInformacoes();
         System.out.println("Especialidade: " + this.getEspecialidade());
         System.out.println("CRM: " + this.getCrm());
     }
 
+    // Método reescrito que vem da Interface Agendavel
     @Override
     public void agendarConsulta(Consulta consulta){
         this.listaConsultas.add(consulta);
