@@ -29,5 +29,5 @@ public abstract class Pessoa {
         System.out.println("Nome: " + this.nome);
         System.out.println("CPF: " + this.cpf);
     }
-    
+
 }
