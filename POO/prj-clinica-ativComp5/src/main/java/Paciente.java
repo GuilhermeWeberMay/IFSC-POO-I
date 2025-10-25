@@ -8,10 +8,10 @@ public class Paciente extends Pessoa implements IAgendavel {
     List<Consulta> listaConsultas =  new ArrayList<>();
 
     // Construtores
-    public Paciente(String nome, String cpf, String contato, String rua, Cidade cidade) {
+    public Paciente(String nome, String cpf, String contato, String rua, String complemento ,Cidade cidade) {
         super(nome, cpf);
         this.contato = contato;
-        this.endereco = new Endereco(rua, cidade);
+        this.endereco = new Endereco(rua, complemento ,cidade);
     }
 
     // Métodos de acesso - getters e setters
@@ -47,5 +47,13 @@ public class Paciente extends Pessoa implements IAgendavel {
     public void agendarConsulta(Consulta consulta) {
         this.listaConsultas.add(consulta);
         consulta.setPaciente(this);
+    }
+
+    @Override
+    public String toString() {
+        return "Paciente{" +
+                "contato='" + contato + '\'' +
+                ", endereco=" + endereco +
+                '}';
     }
 }

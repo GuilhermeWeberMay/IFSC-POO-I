@@ -6,8 +6,9 @@ public class Endereco {
     private Cidade cidade;
 
     // Construtores
-    public Endereco(String rua, Cidade cidade) {
+    public Endereco(String rua, String complemento, Cidade cidade) {
         this.rua = rua;
+        this.complemento = complemento;
         this.cidade = cidade;
     }
 

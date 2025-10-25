@@ -42,4 +42,12 @@ public class Medico extends Pessoa implements IAgendavel{
         this.listaConsultas.add(consulta);
         consulta.setMedico(this);
     }
+
+    @Override
+    public String toString() {
+        return "Medico{" +
+                "especialidade='" + especialidade + '\'' +
+                ", crm='" + crm + '\'' +
+                '}';
+    }
 }
