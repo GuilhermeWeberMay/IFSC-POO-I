@@ -73,9 +73,10 @@ public abstract class Cliente implements IDados{
     public String getDados() {
         StringBuilder dados = new StringBuilder();
         dados.append("Nome: " + nome);
-        return dados;
+        return dados.toString();
     }
 
+    @Override
     public String getDados(String observacao){
         StringBuilder dados = new StringBuilder();
         dados.append(getDados());
