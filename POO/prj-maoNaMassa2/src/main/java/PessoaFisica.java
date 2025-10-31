@@ -1,5 +1,7 @@
 import java.util.*;
-public class PessoaFisica extends Cliente{ // Extends Cliente é a linha da herança na classe cliente
+public final class PessoaFisica extends Cliente implements IDados{
+    // Extends Cliente é a linha da herança na classe cliente
+
     // Atributos
     private String cpf;
     private Date dataNascimento;
@@ -12,11 +14,20 @@ public class PessoaFisica extends Cliente{ // Extends Cliente é a linha da hera
     }
 
     @Override
-    public String toString() {
-        return "PessoaFisica{" +
-                super.toString() +
-                "cpf='" + cpf + '\'' +
-                ", dataNascimento=" + dataNascimento +
-                '}';
+    public String getDados(){
+        StringBuilder dados = new StringBuilder();
+        dados.append(super.getDados()).append("\n");
+        dados.append("CPF: ").append(cpf).append("\n");
+        dados.append("Data de nasciemnto: ").append(dataNascimento).append("\n");
+        return dados.toString();
+    }
+    @Override
+    public String getDados(String observacao){
+        StringBuilder dados = new StringBuilder();
+        dados.append(super.getDados()).append("\n");
+        dados.append("CPF: ").append(cpf).append("\n");
+        dados.append("Data de nasciemnto: ").append(dataNascimento).append("\n");
+        dados.append("Observação ").append(observacao);
+        return dados.toString();
     }
 }

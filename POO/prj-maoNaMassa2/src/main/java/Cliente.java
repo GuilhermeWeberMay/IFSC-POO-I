@@ -72,7 +72,10 @@ public abstract class Cliente implements IDados{
     @Override
     public String getDados() {
         StringBuilder dados = new StringBuilder();
-        dados.append("Nome: " + nome);
+        dados.append("Nome: ").append(nome).append("\n");
+        dados.append("Celular: ").append(celular).append("\n");
+        dados.append("Email: ").append(email).append("\n");
+        dados.append("Data de Cadastro: ").append(dataCadastro);
         return dados.toString();
     }
 
@@ -80,17 +83,8 @@ public abstract class Cliente implements IDados{
     public String getDados(String observacao){
         StringBuilder dados = new StringBuilder();
         dados.append(getDados());
+        dados.append("Observação: ").append(observacao);
         return dados.toString();
     }
 
-    @Override
-    public String toString() {
-        return "Cliente{" +
-                "nome='" + nome + '\'' +
-                ", id=" + id +
-                ", celular='" + celular + '\'' +
-                ", email='" + email + '\'' +
-                ", pontuacao=" + pontuacao.saldo() +
-                '}';
-    }
 }
