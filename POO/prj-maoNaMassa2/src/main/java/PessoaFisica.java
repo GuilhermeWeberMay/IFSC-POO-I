@@ -8,8 +8,8 @@ public final class PessoaFisica extends Cliente implements IDados{
 
     // Construtores
 
-    public PessoaFisica(int id, String nome, String celular, String email, int quantidade, String cpf) {
-        super(id, nome, celular, email, quantidade = 0);
+    public PessoaFisica(int id, String nome, String celular, String email, Date datacadastro,int quantidade, String cpf) {
+        super(id, nome, celular, email, datacadastro,quantidade = 0);
         this.cpf = cpf;
     }
 

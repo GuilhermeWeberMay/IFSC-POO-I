@@ -4,11 +4,11 @@ public class PessoaJuridica extends Cliente{// Extends Cliente é a linha da her
     private String inscricaoEstadual;
 
     // Construtores
-    public PessoaJuridica(int id, String nome, String celular, String email,int pontuacao ,String cnpj, String inscricaoEstadual) {
-        super(id, nome, celular, email, pontuacao = 0);
-        this.cnpj = cnpj;
-        this.inscricaoEstadual = inscricaoEstadual;
-    }
+//    public PessoaJuridica(int id, String nome, String celular, String email, int pontuacao ,String cnpj, String inscricaoEstadual) {
+//        super(id, nome, celular, email,pontuacao = 0);
+//        this.cnpj = cnpj;
+//        this.inscricaoEstadual = inscricaoEstadual;
+//    }
 
     // Métodos getters e setters
     public String getCnpj() {

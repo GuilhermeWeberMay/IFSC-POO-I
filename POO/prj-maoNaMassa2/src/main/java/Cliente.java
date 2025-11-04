@@ -12,7 +12,7 @@ public abstract class Cliente implements IDados{
     private Pontuacao pontuacao;
 
     // Construtores
-    public Cliente(int id, String nome, String celular, String email, int quantidade) {
+    public Cliente(int id, String nome, String celular, String email, Date dataCadastro ,int quantidade) {
         this.id = id;
         this.nome = nome;
         this.celular = celular;
