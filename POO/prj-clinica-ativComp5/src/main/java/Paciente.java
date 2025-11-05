@@ -52,6 +52,7 @@ public class Paciente extends Pessoa implements IAgendavel {
     @Override
     public String toString() {
         return "Paciente{" +
+                super.toString() +
                 "contato='" + contato + '\'' +
                 ", endereco=" + endereco +
                 '}';

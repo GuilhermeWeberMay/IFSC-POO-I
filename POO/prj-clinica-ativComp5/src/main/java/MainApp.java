@@ -7,8 +7,8 @@ public class MainApp {
         Cidade cidade = new Cidade("Biguaçu", "SC");
         Cidade cidade1 = new Cidade("Rio Fortuna", "SC");
 
-        Paciente paciente = new Paciente("Guilherme", "10168481960", "48999117218","Rua Jordelino","Apartamento",cidade);
-        Paciente paciente1 = new Paciente("Silvia", "028.785.159-19", "48991515700", "Estrada Geral do Rio Fortuna","Casa",cidade1);
+        Paciente paciente = new Paciente("Guilherme", "10168481960", "48999117218", "Rua Jordelino", "Apartamento", cidade);
+        Paciente paciente1 = new Paciente("Silvia", "028.785.159-19", "48991515700", "Estrada Geral do Rio Fortuna", "Casa", cidade1);
 
         Consulta consulta = new Consulta("2025-10-16", "16:20h", EPrioridade.BAIXA);
         Consulta consulta1 = new Consulta("2025-10-29", "15:20", EPrioridade.ALTA);

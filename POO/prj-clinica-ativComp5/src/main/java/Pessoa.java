@@ -30,4 +30,11 @@ public abstract class Pessoa {
         System.out.println("CPF: " + this.cpf);
     }
 
+    @Override
+    public String toString() {
+        return "Pessoa{" +
+                "nome='" + nome + '\'' +
+                ", cpf='" + cpf + '\'' +
+                '}';
+    }
 }
