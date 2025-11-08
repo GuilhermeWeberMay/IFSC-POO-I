@@ -1,19 +1,18 @@
-public class Cor {
+public class Marca {
     private int id;
     private String nome;
 
-    // Métodos construtores
+    // Métodos contrutores
 
     // Método construtor completo
-    public Cor(int id, String nome) {
+    public Marca(int id, String nome) {
         this.id = id;
         this.nome = nome;
     }
-
     // Método construtor vazio
 
 
-    // Métodos getters e setters
+    // Métodos GETTERS e SETTERS
     public int getId() {
         return id;
     }
@@ -31,7 +30,7 @@ public class Cor {
     // Método de apresentação do objeto - Reescreve o método toString();
     @Override
     public String toString() {
-        return "Cor{" +
+        return "Marca{" +
                 "id=" + id +
                 ", nome='" + nome + '\'' +
                 '}';

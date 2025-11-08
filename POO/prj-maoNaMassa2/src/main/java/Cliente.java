@@ -1,30 +1,23 @@
 import java.time.LocalDate;
-import java.util.*;
-public abstract class Cliente implements IDados{
-    // Atributos
-    protected int id;
-    protected String nome;
-    protected String celular;
-    protected String email;
-    protected LocalDate dataCadastro;
-    // Associação bidirecional com Veiculo
-    List<Veiculo> veiculos = new ArrayList<>();
-    // Associação de composição com Pontuacao
-    private Pontuacao pontuacao;
+import java.util.ArrayList;
+import java.util.List;
 
-    // Construtores
-    public Cliente(int id, String nome, String celular, String email, LocalDate dataCadastro ,int quantidade) {
+public class Cliente {
+    private int id;
+    private String nome;
+    private String celular;
+    private String email;
+    private LocalDate dataCadastro;
+    private List<Veiculo> listaVeiculos =  new ArrayList<>();
+
+    public Cliente(int id, String nome, String celular, String email) {
         this.id = id;
         this.nome = nome;
         this.celular = celular;
         this.email = email;
-        this.dataCadastro = dataCadastro.now();
-        this.pontuacao = new Pontuacao(quantidade);
-    }
-    public Cliente() {
+        this.dataCadastro = LocalDate.now();
     }
 
-    // Métodos getters e setters
     public int getId() {
         return id;
     }
@@ -53,39 +46,37 @@ public abstract class Cliente implements IDados{
         this.email = email;
     }
 
-    public Date getDataCadastro() {
+    public LocalDate getDataCadastro() {
         return dataCadastro;
     }
-    public void setDataCadastro(Date dataCadastro) {
+    public void setDataCadastro(LocalDate dataCadastro) {
         this.dataCadastro = dataCadastro;
     }
 
-    // Métodos de ação
-    public void add(Veiculo veiculo) {
-        this.veiculos.add(veiculo);
+    public List<Veiculo> getListaVeiculos() {
+        return listaVeiculos;
+    }
+    public void setListaVeiculos(List<Veiculo> listaVeiculos) {
+        this.listaVeiculos = listaVeiculos;
+    }
+
+    public void addVeiculo(Veiculo veiculo) {
+        this.listaVeiculos.add(veiculo);
         veiculo.setCliente(this);
     }
-    public void remove(Veiculo veiculo) {
-        this.veiculos.remove(veiculo);
+    public void removeVeiculo(Veiculo veiculo) {
+        this.listaVeiculos.remove(veiculo);
         veiculo.setCliente(null);
     }
 
     @Override
-    public String getDados() {
-        StringBuilder dados = new StringBuilder();
-        dados.append("Nome: ").append(nome).append("\n");
-        dados.append("Celular: ").append(celular).append("\n");
-        dados.append("Email: ").append(email).append("\n");
-        dados.append("Data de Cadastro: ").append(dataCadastro);
-        return dados.toString();
+    public String toString() {
+        return "Cliente{" +
+                "id=" + id +
+                ", nome='" + nome + '\'' +
+                ", celular='" + celular + '\'' +
+                ", email='" + email + '\'' +
+                ", dataCadastro=" + dataCadastro +
+                '}';
     }
-
-    @Override
-    public String getDados(String observacao){
-        StringBuilder dados = new StringBuilder();
-        dados.append(getDados());
-        dados.append("Observação: ").append(observacao);
-        return dados.toString();
-    }
-
 }
