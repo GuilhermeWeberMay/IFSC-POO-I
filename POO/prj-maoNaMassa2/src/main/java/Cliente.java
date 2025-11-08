@@ -3,11 +3,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 public abstract class Cliente implements IDados{ // implements significa que essa classe tera um contrato com a interface
-    private int id;
-    private String nome;
-    private String celular;
-    private String email;
-    private LocalDate dataCadastro;
+    int id;
+    String nome;
+    String celular;
+    String email;
+    LocalDate dataCadastro;
     private List<Veiculo> listaVeiculos =  new ArrayList<>();
     private Pontuacao pontuacao;
 
