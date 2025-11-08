@@ -17,8 +17,9 @@ public class MainApp {
         Cor cor4 = new Cor(4, "Roxo");
 
         // Instanciacao e sobre carga do objeto Cliente
-        Cliente cliente = new Cliente(1,"Guilherme","48999117218","guilherme.wm@aluno.ifsc.edu.br");
-        Cliente cliente2 = new Cliente(2, "Gabriel", "48996221779", "gabriel.alves@aluno.ifsc.edu.br");
+        PessoaFisica pf = new PessoaFisica(1, "Guilherme", "48 999117218", "gui",
+                "10168481960", 2025, 10, 20);
+        PessoaJuridica pj = new PessoaJuridica(1, "Tela & Decor", "48", "tela", "89", "98");
 
         // Instanciacao e sobre carga do objeto Marca
         Marca marca = new Marca(1, "Nissan");
@@ -39,10 +40,10 @@ public class MainApp {
         Veiculo veiculo4 = new Veiculo(4,"MAY9G06","Motocicleta esportiva de alta cilindrada", cor4, modelo4);
 
         // Associando os cliente aos veiculos
-        cliente.addVeiculo(veiculo); // Guilherme tem Versa
-        cliente.addVeiculo(veiculo4); // Gabriel tem S15
-        cliente2.addVeiculo(veiculo2); // Gabriel tem RS6
-        cliente2.addVeiculo(veiculo3); // Guilherme tem S1000RR
+        pf.addVeiculo(veiculo);  // Guilherme tem Versa
+        pf.addVeiculo(veiculo4); // Gabriel tem S15
+        pf.addVeiculo(veiculo2); // Gabriel tem RS6
+        pf.addVeiculo(veiculo3); // Guilherme tem S1000RR
 
         // Apresentaçao do veículo
         System.out.println("Apresentação dos veículos e seus clientes:");
@@ -52,7 +53,10 @@ public class MainApp {
         print(veiculo4);
 
         System.out.println("Verificação para ver se ligações estão corretas:");
-        System.out.println(cliente.getListaVeiculos().get(1).getModelo().getMarca().getNome());
-
+        System.out.println(pf.getListaVeiculos().get(1).getModelo().getMarca().getNome());
+        System.out.println("-----------------");
+        System.out.println(pf.getDados());
+        System.out.println("-----------------");
+        System.out.println(pj.getDados());
     }
 }
