@@ -1,3 +1,4 @@
+import java.time.LocalDate;
 import java.util.*;
 public abstract class Cliente implements IDados{
     // Atributos
@@ -5,19 +6,19 @@ public abstract class Cliente implements IDados{
     protected String nome;
     protected String celular;
     protected String email;
-    protected Date dataCadastro;
+    protected LocalDate dataCadastro;
     // Associação bidirecional com Veiculo
     List<Veiculo> veiculos = new ArrayList<>();
     // Associação de composição com Pontuacao
     private Pontuacao pontuacao;
 
     // Construtores
-    public Cliente(int id, String nome, String celular, String email, Date dataCadastro ,int quantidade) {
+    public Cliente(int id, String nome, String celular, String email, LocalDate dataCadastro ,int quantidade) {
         this.id = id;
         this.nome = nome;
         this.celular = celular;
         this.email = email;
-        this.dataCadastro = dataCadastro;
+        this.dataCadastro = dataCadastro.now();
         this.pontuacao = new Pontuacao(quantidade);
     }
     public Cliente() {

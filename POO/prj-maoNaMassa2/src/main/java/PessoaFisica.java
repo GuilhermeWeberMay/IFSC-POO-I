@@ -1,3 +1,4 @@
+import java.time.LocalDate;
 import java.util.*;
 public final class PessoaFisica extends Cliente implements IDados{
     // Extends Cliente é a linha da herança na classe cliente
@@ -8,8 +9,8 @@ public final class PessoaFisica extends Cliente implements IDados{
 
     // Construtores
 
-    public PessoaFisica(int id, String nome, String celular, String email, Date datacadastro,int quantidade, String cpf) {
-        super(id, nome, celular, email, datacadastro,quantidade = 0);
+    public PessoaFisica(int id, String nome, String celular, String email, LocalDate datacadastro, int quantidade, String cpf) {
+        super(id, nome, celular, email, datacadastro.now(),quantidade = 0);
         this.cpf = cpf;
     }
 
