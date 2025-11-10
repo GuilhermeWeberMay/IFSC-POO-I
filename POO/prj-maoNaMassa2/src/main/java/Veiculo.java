@@ -1,4 +1,4 @@
-public class Veiculo {
+public class Veiculo implements IDados{
     private int id;
     private String placa;
     private String observacao;
@@ -57,6 +57,22 @@ public class Veiculo {
     }
     public void setCliente(Cliente cliente) {
         this.cliente = cliente;
+    }
+
+    @Override
+    public String getDados() {
+        StringBuilder info = new StringBuilder();
+        info.append("Placa....: ").append(placa).append('\n');
+        info.append("Modelo...: ").append(getModelo()).append('\n');
+        info.append("Marca....: ").append(getModelo().getMarca().getNome()).append('\n');
+        info.append("Categoria: ").append(getModelo().getCategoria().getDescricao()).append('\n');
+        info.append("Potência.: ").append(getModelo().getMotor().getPotencia()).append('\n');
+        return info.toString();
+    }
+
+    @Override
+    public String getDados(String observacao) {
+        return "";
     }
 
     @Override

@@ -11,8 +11,8 @@ public class MainApp {
         System.out.println("Marca.......:"+veiculo.getModelo().getMarca().getNome());
         System.out.println("-----------------------------------------------------------------------");
     }
-    public static void print (IDados dados){
-        System.out.println(dados.getDados());
+    public static void printDesafio(Veiculo veiculo){
+        System.out.println(veiculo.getDados());
     }
     public static void printCliente(Cliente cliente){
         if(cliente instanceof PessoaJuridica){
@@ -21,6 +21,9 @@ public class MainApp {
         }else{
 
         }
+    }
+    public static void print (IDados dados){
+        System.out.println(dados.getDados());
     }
     public static void main(String[] args) {
         // Instanciacao e sobre carga do objeto Cor
@@ -74,6 +77,7 @@ public class MainApp {
 
         print(pj);
         print(pf);
+        printDesafio(veiculo4);
 
     }
 }
