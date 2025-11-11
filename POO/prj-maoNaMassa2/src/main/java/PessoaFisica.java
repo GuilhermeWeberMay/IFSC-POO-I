@@ -1,6 +1,5 @@
 import java.time.LocalDate;
-
-public class PessoaFisica extends Cliente { // Extends é a palavra servada para herança
+public class PessoaFisica extends Cliente implements IDados { // Extends é a palavra servada para herança
     // Atributos
     private String cpf;
     private LocalDate dataNascimento;
@@ -14,11 +13,9 @@ public class PessoaFisica extends Cliente { // Extends é a palavra servada para
     }
 
     // Métodos getters e setters
-
     public String getCpf() {
         return cpf;
     }
-
     public void setCpf(String cpf) {
         this.cpf = cpf;
     }
@@ -26,7 +23,6 @@ public class PessoaFisica extends Cliente { // Extends é a palavra servada para
     public LocalDate getDataNascimento() {
         return dataNascimento;
     }
-
     public void setDataNascimento(LocalDate dataNascimento) {
         this.dataNascimento = dataNascimento;
     }
@@ -37,6 +33,14 @@ public class PessoaFisica extends Cliente { // Extends é a palavra servada para
         info.append(super.getDados());
         info.append("CPF...............: ").append(cpf).append("\n");
         info.append("Data de nascimento: ").append(dataNascimento).append("\n");
+        return info.toString();
+    }
+
+    @Override
+    public String getDados(String observacao){
+        StringBuilder info = new StringBuilder();
+        info.append(getDados());
+        info.append("Observação..........: ").append(observacao).append("\n");
         return info.toString();
     }
 

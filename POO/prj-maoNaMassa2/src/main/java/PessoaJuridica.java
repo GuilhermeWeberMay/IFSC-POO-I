@@ -1,4 +1,4 @@
-public class PessoaJuridica extends Cliente {
+public class PessoaJuridica extends Cliente implements IDados{
     // Atributos
     private String cnpj;
     private String inscricaoEstadual;
@@ -32,6 +32,13 @@ public class PessoaJuridica extends Cliente {
         info.append(super.getDados());
         info.append("CNPJ..............: ").append(cnpj).append("\n");
         info.append("Inscrição estadual: ").append(inscricaoEstadual).append("\n");
+        return info.toString();
+    }
+
+    public String getDados(String observacao){
+        StringBuilder info = new StringBuilder();
+        info.append(getDados());
+        info.append("Observação........: ").append(observacao).append("\n");
         return info.toString();
     }
 

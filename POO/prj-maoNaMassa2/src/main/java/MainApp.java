@@ -1,21 +1,21 @@
-import java.util.List;
-
 public class MainApp {
-//    public static void print(Veiculo veiculo){
-//        System.out.println("Proprietario:"+veiculo.getCliente().getNome());
-//        System.out.println("Placa.......:"+veiculo.getPlaca());
-//        System.out.println("Cor.........:"+veiculo.getCor().getNome());
-//        System.out.println("Veículo.....:"+veiculo.getModelo().getDescricao());
-//        System.out.println("Combústivel.:"+veiculo.getModelo().getMotor().getTipoCombustivel().getDescricao());
-//        System.out.println("Categoria...:"+veiculo.getModelo().getCategoria().getDescricao());
-//        System.out.println("Marca.......:"+veiculo.getModelo().getMarca().getNome());
-//        System.out.println("-----------------------------------------------------------------------");
-//    }
     public static void print(Veiculo veiculo){
         System.out.println(veiculo.getDados());
     }
     public static void print (IDados dados){
+        System.out.println("Dados do print IDados");
         System.out.println(dados.getDados());
+    }
+    public static void print (Cliente c){
+        System.out.println("Dados do print Cliente");
+        if (c instanceof PessoaJuridica){
+            System.out.println("Dados pessoa juridica");
+        }else {
+            System.out.println("Dados pessoa fisica");
+        }
+        System.out.print(c.getDados());
+        System.out.println(c.getPontuacao());
+        System.out.println();
     }
     public static void main(String[] args) {
         // Instanciacao e sobre carga do objeto Cor
@@ -55,6 +55,10 @@ public class MainApp {
 
         print(pj);
         print(pf);
+
+        print((IDados)pf);
+        print((IDados)pj);
+
         print(veiculo);
         print(veiculo2);
         print(veiculo3);

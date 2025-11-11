@@ -75,6 +75,14 @@ public abstract class Cliente implements IDados{ // implements significa que ess
         veiculo.setCliente(null);
     }
 
+    public String apresentaListaCarros(){
+        StringBuilder car = new StringBuilder();
+        for (Veiculo v : listaVeiculos){
+            car.append(v.getCor());
+        }
+        return car.toString();
+    }
+
     // Métodos abstratos da Interface
     public String getDados(){
         StringBuilder info = new StringBuilder();
