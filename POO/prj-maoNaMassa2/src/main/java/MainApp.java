@@ -1,26 +1,18 @@
 import java.util.List;
 
 public class MainApp {
+//    public static void print(Veiculo veiculo){
+//        System.out.println("Proprietario:"+veiculo.getCliente().getNome());
+//        System.out.println("Placa.......:"+veiculo.getPlaca());
+//        System.out.println("Cor.........:"+veiculo.getCor().getNome());
+//        System.out.println("Veículo.....:"+veiculo.getModelo().getDescricao());
+//        System.out.println("Combústivel.:"+veiculo.getModelo().getMotor().getTipoCombustivel().getDescricao());
+//        System.out.println("Categoria...:"+veiculo.getModelo().getCategoria().getDescricao());
+//        System.out.println("Marca.......:"+veiculo.getModelo().getMarca().getNome());
+//        System.out.println("-----------------------------------------------------------------------");
+//    }
     public static void print(Veiculo veiculo){
-        System.out.println("Proprietario:"+veiculo.getCliente().getNome());
-        System.out.println("Placa.......:"+veiculo.getPlaca());
-        System.out.println("Cor.........:"+veiculo.getCor().getNome());
-        System.out.println("Veículo.....:"+veiculo.getModelo().getDescricao());
-        System.out.println("Combústivel.:"+veiculo.getModelo().getMotor().getTipoCombustivel().getDescricao());
-        System.out.println("Categoria...:"+veiculo.getModelo().getCategoria().getDescricao());
-        System.out.println("Marca.......:"+veiculo.getModelo().getMarca().getNome());
-        System.out.println("-----------------------------------------------------------------------");
-    }
-    public static void printDesafio(Veiculo veiculo){
         System.out.println(veiculo.getDados());
-    }
-    public static void printCliente(Cliente cliente){
-        if(cliente instanceof PessoaJuridica){
-            System.out.println(((PessoaJuridica) cliente).getCnpj());
-
-        }else{
-
-        }
     }
     public static void print (IDados dados){
         System.out.println(dados.getDados());
@@ -61,23 +53,12 @@ public class MainApp {
         pf.addVeiculo(veiculo2); // Gabriel tem RS6
         pf.addVeiculo(veiculo3); // Guilherme tem S1000RR
 
-        // Apresentaçao do veículo
-//        System.out.println("Apresentação dos veículos e seus clientes:");
-//        print(veiculo);
-//        print(veiculo2);
-//        print(veiculo3);
-//        print(veiculo4);
-//
-//        System.out.println("Verificação para ver se ligações estão corretas:");
-//        System.out.println(pf.getListaVeiculos().get(1).getModelo().getMarca().getNome());
-//        System.out.println("-----------------");
-//        System.out.println(pf.getDados());
-//        System.out.println("-----------------");
-//        System.out.println(pj.getDados());
-
         print(pj);
         print(pf);
-        printDesafio(veiculo4);
+        print(veiculo);
+        print(veiculo2);
+        print(veiculo3);
+        print(veiculo4);
 
     }
 }
