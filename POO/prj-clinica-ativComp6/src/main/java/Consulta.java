@@ -12,11 +12,11 @@ public class Consulta {
     private RegistroConsulta registroConsulta;
 
     // Construtor
-    public Consulta(String data, String horario, EPrioridade prioridade, String descricao) {
+    public Consulta(String data, String horario, EPrioridade prioridade, RegistroConsulta registroConsulta) {
         this.data = data;
         this.horario = horario;
         this.prioridade = prioridade;
-        this.registroConsulta = new RegistroConsulta(descricao);
+        this.registroConsulta = registroConsulta;
     }
 
     // Métodos de acesso - getters e setters
