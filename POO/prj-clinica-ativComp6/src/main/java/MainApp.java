@@ -13,10 +13,11 @@ public class MainApp {
     public static void print (Consulta c){
         print(c.getPaciente());
         print(c.getMedico());
+        System.out.println("MEDICAMENETOS RECEITADOS: ");
         for (HistoricoMedicacao r : c.getRegistroConsulta().getHistoricoMedicacoes()) {
             System.out.println("Nome medicamento....: " + r.getMedicamento().getNome());
             System.out.println("Laboratório indicado: "+ r.getMedicamento().getFabricante());
-            System.out.println("Queixa do paciente..: " + r.getRegistroConsulta().getDescricao());
+            System.out.println("Diagnóstico.........: " + r.getRegistroConsulta().getDescricao());
             System.out.println("====================");
         }
     }
@@ -57,12 +58,17 @@ public class MainApp {
         paciente1.agendarConsulta(consulta1);
         medico1.agendarConsulta(consulta1);
 
+        // Associando os historicos aos registros
         rg1.adicionarMedicamento(hm1);
         rg1.adicionarMedicamento(hm2);
         rg2.adicionarMedicamento(hm3);
         rg2.adicionarMedicamento(hm4);
 
+        // Mostrando as informações das consulta
+        System.out.println("PRIMEIRA CONSULTA: ");
         print(consulta);
+        System.out.println();
+        System.out.println("SEGUNDA CONSULTA: ");
         print(consulta1);
     }
 }
