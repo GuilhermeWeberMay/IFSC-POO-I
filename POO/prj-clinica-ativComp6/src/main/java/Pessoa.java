@@ -26,8 +26,8 @@ public abstract class Pessoa {
 
     // Métodos
     protected void exibirInformacoes(){
-        System.out.println("Nome: " + this.nome);
-        System.out.println("CPF: " + this.cpf);
+        System.out.println("Nome.........: " + this.nome);
+        System.out.println("CPF..........: " + this.cpf);
     }
 
     @Override

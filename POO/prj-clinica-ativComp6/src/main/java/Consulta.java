@@ -11,13 +11,7 @@ public class Consulta {
     // Associaçao de composição com RegistroConsulta
     private RegistroConsulta registroConsulta;
 
-    // Construtores
-    public Consulta(String data, String horario, String descricao) {
-        this.data = data;
-        this.horario = horario;
-        this.registroConsulta = new RegistroConsulta(descricao);
-    }
-
+    // Construtor
     public Consulta(String data, String horario, EPrioridade prioridade, String descricao) {
         this.data = data;
         this.horario = horario;

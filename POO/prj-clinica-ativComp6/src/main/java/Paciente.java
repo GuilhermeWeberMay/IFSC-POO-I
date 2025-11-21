@@ -36,10 +36,10 @@ public class Paciente extends Pessoa implements IAgendavel {
     // Métodos
     public void exibirInformacoes(){
         super.exibirInformacoes();
-        System.out.println("Contato: " + this.getContato());
-        System.out.println("Rua: " + this.getEndereco().getRua());
-        System.out.println("Cidade: " + this.getEndereco().getCidade().getNome());
-        System.out.println("Uf: " + this.getEndereco().getCidade().getUf());
+        System.out.println("Contato......: " + this.getContato());
+        System.out.println("Rua..........: " + this.getEndereco().getRua());
+        System.out.println("Cidade.......: " + this.getEndereco().getCidade().getNome());
+        System.out.println("Uf...........: " + this.getEndereco().getCidade().getUf());
     }
 
     // Método reescrito que vem da Interface Agendavel

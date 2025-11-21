@@ -33,7 +33,7 @@ public class Medico extends Pessoa implements IAgendavel{
     public void exibirInformacoes(){
         super.exibirInformacoes();
         System.out.println("Especialidade: " + this.getEspecialidade());
-        System.out.println("CRM: " + this.getCrm());
+        System.out.println("CRM..........: " + this.getCrm());
     }
 
     // Método reescrito que vem da Interface Agendavel
