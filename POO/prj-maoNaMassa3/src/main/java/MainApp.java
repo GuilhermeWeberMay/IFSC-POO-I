@@ -87,7 +87,7 @@ public class MainApp {
         OrdemServico os1 = new OrdemServico(1,30f, LocalDate.now(), 0f, EStatus.FECHADA, veiculo);
 
         ItemOS itemOS1 = new ItemOS(30f, "Teste", os1, servico1);
-        
+
         os1.add(itemOS1);
 
 
