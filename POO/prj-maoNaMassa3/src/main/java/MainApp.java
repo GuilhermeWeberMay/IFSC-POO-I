@@ -106,6 +106,7 @@ public class MainApp {
 
         print(os1);
 
+        print(pf);
 
 
     }

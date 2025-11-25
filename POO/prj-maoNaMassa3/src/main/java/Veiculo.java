@@ -63,7 +63,7 @@ public class Veiculo implements IDados{
     public String getDados() {
         StringBuilder info = new StringBuilder();
         info.append("Placa....: ").append(placa).append('\n');
-        info.append("Modelo...: ").append(getModelo()).append('\n');
+        info.append("Modelo...: ").append(getModelo().getDescricao()).append('\n');
         info.append("Marca....: ").append(getModelo().getMarca().getNome()).append('\n');
         info.append("Categoria: ").append(getModelo().getCategoria().getDescricao()).append('\n');
         info.append("Potência.: ").append(getModelo().getMotor().getPotencia()).append('\n');
