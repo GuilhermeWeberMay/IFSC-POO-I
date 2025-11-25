@@ -10,8 +10,12 @@ public class MainApp {
         System.out.println(os.getVeiculo().getModelo().getDescricao());
         System.out.println("========================");
         for(ItemOS itemOS : os.getItensOS()){
-            System.out.println(os.getItensOS().getFirst());
+            System.out.println(itemOS.getServico().getDescricao());
+            System.out.println(itemOS.getServico().getValor());
         }
+        System.out.println(os.getTotal());
+        System.out.println(os.getDesconto());
+        System.out.println(os.getTotal());
     }
     public static void print(Veiculo veiculo) {
         System.out.println(veiculo.getDados());
@@ -84,11 +88,14 @@ public class MainApp {
         Servico servico13 = new Servico(9, "Lavagem externa", 20f, 10, ECategoria.MOTO);
         Servico servico14 = new Servico(9, "Lavação externa + cera", 40f, 10, ECategoria.MOTO);
 
-        OrdemServico os1 = new OrdemServico(1,30f, LocalDate.now(), 0f, EStatus.FECHADA, veiculo);
+        OrdemServico os1 = new OrdemServico(1,30f, LocalDate.now(), 0f, EStatus.CANCELADA, veiculo);
 
         ItemOS itemOS1 = new ItemOS(30f, "Teste", os1, servico1);
+        ItemOS itemOS2 = new ItemOS(30f, "Teste", os1, servico14);
 
         os1.add(itemOS1);
+        os1.add(itemOS2);
+
 
 
         // Associando os cliente aos veiculos
