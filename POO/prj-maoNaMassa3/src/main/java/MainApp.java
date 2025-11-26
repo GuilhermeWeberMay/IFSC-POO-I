@@ -2,6 +2,7 @@ import java.time.LocalDate;
 
 public class MainApp {
     public static void print(OrdemServico os){
+        // Tudo de acordo com o mnm3
         System.out.println(os.getNumero());
         System.out.println(os.getAgenda());
         System.out.println(os.getStatus());
@@ -9,9 +10,11 @@ public class MainApp {
         System.out.println(os.getVeiculo().getPlaca());
         System.out.println(os.getVeiculo().getModelo().getDescricao());
         System.out.println("========================");
+        int nItem = 0;
         for(ItemOS itemOS : os.getItensOS()){
-            System.out.println(itemOS.getServico().getDescricao());
+            System.out.println((nItem+1)+" "+itemOS.getServico().getDescricao());
             System.out.println(itemOS.getServico().getValor());
+            nItem++;
         }
         System.out.println(os.getTotal());
         System.out.println(os.getDesconto());
@@ -70,7 +73,7 @@ public class MainApp {
         Veiculo veiculo4 = new Veiculo(4, "MAY9G06", "Motocicleta esportiva de alta cilindrada", cor4, modelo4);
 
         // Instanciacao e sobrecarga do objeto Serviço
-        Servico servico1  = new Servico(1, "Lavagem externa", 30f, 10, ECategoria.PEQUENO);
+        Servico servico1  = new Servico(1, "Lavagem externa", 100f, 10, ECategoria.PEQUENO);
         Servico servico2  = new Servico(1, "Lavagem externa", 50f, 10, ECategoria.PADRAO);
         Servico servico3  = new Servico(2, "Lavação externa", 70f, 10, ECategoria.MEDIO);
         Servico servico4  = new Servico(3, "Lavação externa", 90f, 10, ECategoria.GRANDE);
@@ -86,12 +89,13 @@ public class MainApp {
         Servico servico12 = new Servico(9, "Lavação externa + interna + cera", 130f, 10, ECategoria.GRANDE);
 
         Servico servico13 = new Servico(9, "Lavagem externa", 20f, 10, ECategoria.MOTO);
-        Servico servico14 = new Servico(9, "Lavação externa + cera", 40f, 10, ECategoria.MOTO);
+        Servico servico14 = new Servico(9, "Lavação externa + cera", 50f, 10, ECategoria.MOTO);
 
-        OrdemServico os1 = new OrdemServico(1,30f, LocalDate.now(), 0f, EStatus.CANCELADA, veiculo);
+        OrdemServico os1 = new OrdemServico(1,30f, LocalDate.now(), 10f, EStatus.CANCELADA, veiculo4);
 
-        ItemOS itemOS1 = new ItemOS(30f, "Teste", os1, servico1);
-        ItemOS itemOS2 = new ItemOS(30f, "Teste", os1, servico14);
+        // Tenho que fazer isso desse jeito? Esta certo? - MARCOS
+        ItemOS itemOS1 = new ItemOS("Teste", os1, servico1);
+        ItemOS itemOS2 = new ItemOS("Teste", os1, servico14);
 
         os1.add(itemOS1);
         os1.add(itemOS2);
@@ -104,9 +108,8 @@ public class MainApp {
         pj.addVeiculo(veiculo2); // Gabriel tem RS6
         pf.addVeiculo(veiculo3); // Guilherme tem S1000RR
 
+        // Posso formatar os valores nos get's?
         print(os1);
-
-        print(pf);
 
 
     }

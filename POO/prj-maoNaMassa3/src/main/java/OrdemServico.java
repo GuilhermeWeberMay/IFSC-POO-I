@@ -33,7 +33,7 @@ public class OrdemServico {
     }
 
     public double getTotal() {
-        return total;
+        return calcularServico();
     }
     public void setTotal(double total) {
         this.total = total;
@@ -47,7 +47,7 @@ public class OrdemServico {
     }
 
     public double getDesconto() {
-        return desconto;
+        return desconto / 100;
     }
     public void setDesconto(double desconto) {
         this.desconto = desconto;
@@ -75,7 +75,11 @@ public class OrdemServico {
     }
 
     public double calcularServico(){
-        return total;
+        total = 0;
+        for (ItemOS itemOS : itensOS){
+            total += itemOS.getServico().getValor();
+        }
+        return total -= total * getDesconto();
     }
     public void add(ItemOS itemOS){
         itensOS.add(itemOS);

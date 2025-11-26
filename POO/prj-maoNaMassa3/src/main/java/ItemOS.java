@@ -5,7 +5,7 @@ public class ItemOS {
     private OrdemServico ordemServico;
     private Servico servico;
 
-    public ItemOS(double valorServico, String observacoes, OrdemServico ordemServico, Servico servico) {
+    public ItemOS(String observacoes, OrdemServico ordemServico, Servico servico) {
         this.valorServico = servico.getValor();
         this.observacoes = observacoes;
         this.ordemServico = ordemServico;
