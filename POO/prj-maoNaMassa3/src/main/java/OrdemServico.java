@@ -15,7 +15,7 @@ public class OrdemServico {
     private List<ItemOS> itensOS = new ArrayList<>(); // Isso já garante a composição? Porque?
 
     // Construtor
-    public OrdemServico(long numero, double total, LocalDate agenda, double desconto,EStatus status,Veiculo veiculo) {
+    public OrdemServico(long numero, double total, LocalDate agenda, double desconto, EStatus status, Veiculo veiculo) {
         this.numero = numero;
         this.total = total;
         this.agenda = LocalDate.now();
@@ -28,13 +28,15 @@ public class OrdemServico {
     public long getNumero() {
         return numero;
     }
+
     public void setNumero(long numero) {
         this.numero = numero;
     }
 
-    public double getTotal() {
+    public double getTotal() throws Exception {
         return calcularServico();
     }
+
     public void setTotal(double total) {
         this.total = total;
     }
@@ -42,6 +44,7 @@ public class OrdemServico {
     public LocalDate getAgenda() {
         return agenda;
     }
+
     public void setAgenda(LocalDate agenda) {
         this.agenda = agenda;
     }
@@ -49,6 +52,7 @@ public class OrdemServico {
     public double getDesconto() {
         return desconto / 100;
     }
+
     public void setDesconto(double desconto) {
         this.desconto = desconto;
     }
@@ -56,6 +60,7 @@ public class OrdemServico {
     public EStatus getStatus() {
         return status;
     }
+
     public void setStatus(EStatus status) {
         this.status = status;
     }
@@ -63,6 +68,7 @@ public class OrdemServico {
     public Veiculo getVeiculo() {
         return veiculo;
     }
+
     public void setVeiculo(Veiculo veiculo) {
         this.veiculo = veiculo;
     }
@@ -70,21 +76,28 @@ public class OrdemServico {
     public List<ItemOS> getItensOS() {
         return itensOS;
     }
+
     public void setItensOS(List<ItemOS> itensOS) {
         this.itensOS = itensOS;
     }
 
-    public double calcularServico(){
-        total = 0;
-        for (ItemOS itemOS : itensOS){
-            total += itemOS.getServico().getValor();
+    public double calcularServico() throws Exception {
+        if (itensOS.isEmpty()) {
+            throw new Exception("Nenhum ItemOS encontrado.");
+        }else{
+            total = 0;
+            for (ItemOS itemOS : itensOS) {
+                total += itemOS.getServico().getValor();
+            }
+            return total -= total * getDesconto();
         }
-        return total -= total * getDesconto();
     }
-    public void add(ItemOS itemOS){
+
+    public void add(ItemOS itemOS) {
         itensOS.add(itemOS);
     }
-    public void remove(ItemOS itemOS){
+
+    public void remove(ItemOS itemOS) {
         itensOS.remove(itemOS);
     }
 
