@@ -10,9 +10,9 @@ public class MainApp {
         System.out.println(os.getVeiculo().getPlaca());
         System.out.println(os.getVeiculo().getModelo().getDescricao());
         System.out.println("========================");
-        int nItem = 0;
+        int nItem = 1;
         for(ItemOS itemOS : os.getItensOS()){
-            System.out.println((nItem+1)+" "+itemOS.getServico().getDescricao());
+            System.out.println(nItem+" "+itemOS.getServico().getDescricao());
             System.out.println(itemOS.getServico().getValor());
             nItem++;
         }
