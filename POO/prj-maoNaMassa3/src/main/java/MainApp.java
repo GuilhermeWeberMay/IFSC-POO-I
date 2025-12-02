@@ -86,22 +86,22 @@ public class MainApp {
 
         // Instanciacao e sobrecarga do objeto Serviço
         Servico servico1 = new Servico(1, "Lavagem externa", 100f, 10, ECategoria.PEQUENO);
-        Servico servico2 = new Servico(1, "Lavagem externa", 50f, 10, ECategoria.PADRAO);
-        Servico servico3 = new Servico(2, "Lavação externa", 70f, 10, ECategoria.MEDIO);
-        Servico servico4 = new Servico(3, "Lavação externa", 90f, 10, ECategoria.GRANDE);
+        Servico servico2 = new Servico(2, "Lavagem externa", 50f, 10, ECategoria.PADRAO);
+        Servico servico3 = new Servico(3, "Lavação externa", 70f, 10, ECategoria.MEDIO);
+        Servico servico4 = new Servico(4, "Lavação externa", 90f, 10, ECategoria.GRANDE);
 
-        Servico servico5 = new Servico(1, "Lavação externa + interna", 50f, 10, ECategoria.PEQUENO);
-        Servico servico6 = new Servico(4, "Lavação externa + interna", 70f, 10, ECategoria.PADRAO);
-        Servico servico7 = new Servico(5, "Lavação externa + interna", 90f, 10, ECategoria.MEDIO);
-        Servico servico8 = new Servico(6, "Lavação externa + interna", 110f, 10, ECategoria.GRANDE);
+        Servico servico5 = new Servico(5, "Lavação externa + interna", 50f, 10, ECategoria.PEQUENO);
+        Servico servico6 = new Servico(6, "Lavação externa + interna", 70f, 10, ECategoria.PADRAO);
+        Servico servico7 = new Servico(7, "Lavação externa + interna", 90f, 10, ECategoria.MEDIO);
+        Servico servico8 = new Servico(8, "Lavação externa + interna", 110f, 10, ECategoria.GRANDE);
 
-        Servico servico9 = new Servico(1, "Lavação externa + interna + cera", 70f, 10, ECategoria.PEQUENO);
-        Servico servico10 = new Servico(7, "Lavação externa + interna + cera", 90f, 10, ECategoria.PADRAO);
-        Servico servico11 = new Servico(8, "Lavação externa + interna + cera", 110f, 10, ECategoria.MEDIO);
-        Servico servico12 = new Servico(9, "Lavação externa + interna + cera", 130f, 10, ECategoria.GRANDE);
+        Servico servico9 = new Servico(9, "Lavação externa + interna + cera", 70f, 10, ECategoria.PEQUENO);
+        Servico servico10 = new Servico(10, "Lavação externa + interna + cera", 90f, 10, ECategoria.PADRAO);
+        Servico servico11 = new Servico(11, "Lavação externa + interna + cera", 110f, 10, ECategoria.MEDIO);
+        Servico servico12 = new Servico(12, "Lavação externa + interna + cera", 130f, 10, ECategoria.GRANDE);
 
-        Servico servico13 = new Servico(9, "Lavagem externa", 20f, 10, ECategoria.MOTO);
-        Servico servico14 = new Servico(9, "Lavação externa + cera", 50f, 10, ECategoria.MOTO);
+        Servico servico13 = new Servico(13, "Lavagem externa", 20f, 10, ECategoria.MOTO);
+        Servico servico14 = new Servico(14, "Lavação externa + cera", 50f, 10, ECategoria.MOTO);
 
         OrdemServico os1 = new OrdemServico(1, 30f, LocalDate.now(), 10f, EStatus.CANCELADA, veiculo4);
 
