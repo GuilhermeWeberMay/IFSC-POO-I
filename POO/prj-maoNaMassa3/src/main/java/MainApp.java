@@ -103,14 +103,15 @@ public class MainApp {
         Servico servico13 = new Servico(13, "Lavagem externa", 20f, 10, ECategoria.MOTO);
         Servico servico14 = new Servico(14, "Lavação externa + cera", 50f, 10, ECategoria.MOTO);
 
-        OrdemServico os1 = new OrdemServico(1, 30f, LocalDate.now(), 10f, EStatus.CANCELADA, veiculo4);
+
+        OrdemServico os1 = new OrdemServico(1, 0f, LocalDate.now(), 10f, EStatus.CANCELADA, veiculo4);
 
         // Tenho que fazer isso desse jeito? Esta certo? - MARCOS
         ItemOS itemOS1 = new ItemOS("Teste", os1, servico1);
         ItemOS itemOS2 = new ItemOS("Teste", os1, servico14);
 
-//        os1.add(itemOS1);
-//        os1.add(itemOS2);
+        os1.add(itemOS1);
+        os1.add(itemOS2);
 
 
         // Associando os cliente aos veiculos
