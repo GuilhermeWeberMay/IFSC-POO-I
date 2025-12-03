@@ -1,7 +1,7 @@
 import java.time.LocalDate;
 
 public class MainApp {
-    public static void print(OrdemServico os) {
+    public static void imprimir (OrdemServico os) {
         System.out.println(ImpressaoOS.imprimirOS(os));
     }
 
@@ -66,13 +66,15 @@ public class MainApp {
         Servico.setPontos(10);
 
 
-        OrdemServico os1 = new OrdemServico(1,10f, EStatus.CANCELADA, veiculo2);
+        OrdemServico os1 = new OrdemServico(1,10f, EStatus.CANCELADA, veiculo);
 
         ItemOS itemOS1 = new ItemOS("Teste", os1, servico1);
         ItemOS itemOS2 = new ItemOS("Teste", os1, servico14);
+        ItemOS itemOS3 = new ItemOS("Teste", os1, servico8);
 
         os1.add(itemOS1);
         os1.add(itemOS2);
+        os1.add(itemOS3);
 
 
         // Associando os cliente aos veiculos
@@ -82,7 +84,7 @@ public class MainApp {
         pf.addVeiculo(veiculo3); // Guilherme tem S1000RR
 
         // Posso formatar os valores nos get's?
-        print(os1);
+        imprimir(os1);
 
 //        imprimir(pf);
 //        imprimir(pj);
