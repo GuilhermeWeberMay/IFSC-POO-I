@@ -17,16 +17,18 @@ public class MainApp {
                 System.out.println(itemOS.getServico().getValor());
                 nItem++;
             }
-        } catch (Exception lavacao) {
-            System.out.println(lavacao.getMessage());
+        } catch (ExceptionLavacao e) {
+            System.out.println(e.getMessage());
         }
+
         try {
             System.out.println(os.getTotal());
             System.out.println(os.getDesconto());
             System.out.println(os.getTotal());
-        } catch (Exception lavacao) {
+        } catch (ExceptionLavacao lavacao) {
             System.out.println(lavacao.getMessage());
         }
+
     }
 
     public static void print(Veiculo veiculo) {
@@ -110,8 +112,8 @@ public class MainApp {
         ItemOS itemOS1 = new ItemOS("Teste", os1, servico1);
         ItemOS itemOS2 = new ItemOS("Teste", os1, servico14);
 
-        os1.add(itemOS1);
-        os1.add(itemOS2);
+//        os1.add(itemOS1);
+//        os1.add(itemOS2);
 
 
         // Associando os cliente aos veiculos
@@ -122,7 +124,5 @@ public class MainApp {
 
         // Posso formatar os valores nos get's?
         print(os1);
-
-
     }
 }

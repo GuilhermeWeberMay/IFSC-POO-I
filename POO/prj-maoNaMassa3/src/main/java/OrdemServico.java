@@ -33,8 +33,12 @@ public class OrdemServico {
         this.numero = numero;
     }
 
-    public double getTotal() throws Exception {
-        return calcularServico();
+    public double getTotal() throws ExceptionLavacao {
+        if (total == 0){
+            throw new ExceptionLavacao("Não há valor total pois não há serviço vinculado");
+        }else {
+            return calcularServico();
+        }
     }
 
     public void setTotal(double total) {
@@ -73,17 +77,21 @@ public class OrdemServico {
         this.veiculo = veiculo;
     }
 
-    public List<ItemOS> getItensOS() {
-        return itensOS;
+    public List<ItemOS> getItensOS() throws ExceptionLavacao{
+        if (itensOS.isEmpty()){
+            throw new ExceptionLavacao("Não há serviços na lista para serem calculados");
+        }else {
+            return itensOS;
+        }
     }
 
     public void setItensOS(List<ItemOS> itensOS) {
         this.itensOS = itensOS;
     }
 
-    public double calcularServico() throws Exception {
+    public double calcularServico() throws ExceptionLavacao {
         if (itensOS.isEmpty()) {
-            throw new Exception("Nenhum ItemOS encontrado.");
+            throw new ExceptionLavacao("Não há serviços na lista para serem calculados");
         }else{
             total = 0;
             for (ItemOS itemOS : itensOS) {
