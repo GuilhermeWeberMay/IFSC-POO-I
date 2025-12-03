@@ -15,9 +15,8 @@ public class OrdemServico {
     private List<ItemOS> itensOS = new ArrayList<>(); // Isso já garante a composição? Porque?
 
     // Construtor
-    public OrdemServico(long numero, double total, LocalDate agenda, double desconto, EStatus status, Veiculo veiculo) {
+    public OrdemServico(long numero, double desconto, EStatus status, Veiculo veiculo) {
         this.numero = numero;
-        this.total = total;
         this.agenda = LocalDate.now();
         this.desconto = desconto;
         this.status = status;
@@ -33,10 +32,10 @@ public class OrdemServico {
         this.numero = numero;
     }
 
-    public double getTotal() throws ExceptionLavacao{
-        if(total < 0){
-            throw new ExceptionLavacao("Sei lá");
-        }else{
+    public double getTotal() throws ExceptionLavacao {
+        if (total == 0){
+            throw new ExceptionLavacao("Não há valor total pois não há serviço vinculado");
+        }else {
             return calcularServico();
         }
     }
