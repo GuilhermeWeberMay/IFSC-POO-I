@@ -8,11 +8,10 @@ public class Servico {
     private ECategoria categoria;
 
     // Construtor
-    public Servico(int id, String descricao, double valor,int pontos ,ECategoria categoria) {
+    public Servico(int id, String descricao, double valor,ECategoria categoria) {
         this.id = id;
         this.descricao = descricao;
         this.valor = valor;
-        this.pontos = pontos;
         this.categoria = categoria;
     }
 

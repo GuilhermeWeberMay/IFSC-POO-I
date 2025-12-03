@@ -2,6 +2,9 @@ import java.time.LocalDate;
 
 public class MainApp {
     public static void print(OrdemServico os) {
+<<<<<<< HEAD
+        System.out.println(ImpressaoOS.imprimirOS(os));
+=======
         // Tudo de acordo com o mnm3
         System.out.println(os.getNumero());
         System.out.println(os.getAgenda());
@@ -20,39 +23,24 @@ public class MainApp {
         } catch (ExceptionLavacao e) {
             System.out.println(e.getMessage());
         }
+
         try {
             System.out.println(os.getTotal());
             System.out.println(os.getDesconto());
             System.out.println(os.getTotal());
-        }catch (ExceptionLavacao e) {
-            System.out.println(e.getMessage());
+        } catch (ExceptionLavacao lavacao) {
+            System.out.println(lavacao.getMessage());
         }
 
+>>>>>>> parent of 3798829 (feito exception)
     }
 
     public static void print(Veiculo veiculo) {
         System.out.println(veiculo.getDados());
     }
 
-    public static void print(IDados dados) {
-        System.out.println("Dados do print IDados");
-        System.out.println(dados.getDados());
-    }
-
-    public static void print(Cliente c) {
-        System.out.println("Dados do print Cliente");
-        if (c instanceof PessoaJuridica) {
-            System.out.println("Dados pessoa juridica");
-        } else {
-            System.out.println("Dados pessoa fisica");
-        }
-        System.out.println(c.getDados());
-        System.out.println("Lista de carros: ");
-        for (Veiculo v : c.getListaVeiculos()) {
-            print(v);
-        }
-        System.out.println(c.getPontuacao());
-        System.out.println();
+    public static void imprimir (Cliente c) {
+        System.out.print(Relatorio.imprimir(c));
     }
 
     public static void main(String[] args) {
@@ -86,33 +74,35 @@ public class MainApp {
         Veiculo veiculo4 = new Veiculo(4, "MAY9G06", "Motocicleta esportiva de alta cilindrada", cor4, modelo4);
 
         // Instanciacao e sobrecarga do objeto Serviço
-        Servico servico1 = new Servico(1, "Lavagem externa", 100f, 10, ECategoria.PEQUENO);
-        Servico servico2 = new Servico(2, "Lavagem externa", 50f, 10, ECategoria.PADRAO);
-        Servico servico3 = new Servico(3, "Lavação externa", 70f, 10, ECategoria.MEDIO);
-        Servico servico4 = new Servico(4, "Lavação externa", 90f, 10, ECategoria.GRANDE);
+        Servico servico1 = new Servico(1, "Lavagem externa", 100f,  ECategoria.PEQUENO);
+        Servico servico2 = new Servico(2, "Lavagem externa", 50f,  ECategoria.PADRAO);
+        Servico servico3 = new Servico(3, "Lavação externa", 70f,  ECategoria.MEDIO);
+        Servico servico4 = new Servico(4, "Lavação externa", 90f,  ECategoria.GRANDE);
 
-        Servico servico5 = new Servico(5, "Lavação externa + interna", 50f, 10, ECategoria.PEQUENO);
-        Servico servico6 = new Servico(6, "Lavação externa + interna", 70f, 10, ECategoria.PADRAO);
-        Servico servico7 = new Servico(7, "Lavação externa + interna", 90f, 10, ECategoria.MEDIO);
-        Servico servico8 = new Servico(8, "Lavação externa + interna", 110f, 10, ECategoria.GRANDE);
+        Servico servico5 = new Servico(5, "Lavação externa + interna", 50f,  ECategoria.PEQUENO);
+        Servico servico6 = new Servico(6, "Lavação externa + interna", 70f,  ECategoria.PADRAO);
+        Servico servico7 = new Servico(7, "Lavação externa + interna", 90f,  ECategoria.MEDIO);
+        Servico servico8 = new Servico(8, "Lavação externa + interna", 110f,  ECategoria.GRANDE);
 
-        Servico servico9 = new Servico(9, "Lavação externa + interna + cera", 70f, 10, ECategoria.PEQUENO);
-        Servico servico10 = new Servico(10, "Lavação externa + interna + cera", 90f, 10, ECategoria.PADRAO);
-        Servico servico11 = new Servico(11, "Lavação externa + interna + cera", 110f, 10, ECategoria.MEDIO);
-        Servico servico12 = new Servico(12, "Lavação externa + interna + cera", 130f, 10, ECategoria.GRANDE);
+        Servico servico9 = new Servico(9, "Lavação externa + interna + cera", 70f,  ECategoria.PEQUENO);
+        Servico servico10 = new Servico(10, "Lavação externa + interna + cera", 90f,  ECategoria.PADRAO);
+        Servico servico11 = new Servico(11, "Lavação externa + interna + cera", 110f,  ECategoria.MEDIO);
+        Servico servico12 = new Servico(12, "Lavação externa + interna + cera", 130f,  ECategoria.GRANDE);
 
-        Servico servico13 = new Servico(13, "Lavagem externa", 20f, 10, ECategoria.MOTO);
-        Servico servico14 = new Servico(14, "Lavação externa + cera", 50f, 10, ECategoria.MOTO);
+        Servico servico13 = new Servico(13, "Lavagem externa", 20f,  ECategoria.MOTO);
+        Servico servico14 = new Servico(14, "Lavação externa + cera", 50f,  ECategoria.MOTO);
+
+        // Usa o atributo estatico, e coloca todos os serviços com a mesma pontuação
+        Servico.setPontos(10);
 
 
-        OrdemServico os1 = new OrdemServico(1, 0f, LocalDate.now(), 10f, EStatus.CANCELADA, veiculo4);
+        OrdemServico os1 = new OrdemServico(1,10f, EStatus.CANCELADA, veiculo4);
 
-        // Tenho que fazer isso desse jeito? Esta certo? - MARCOS
         ItemOS itemOS1 = new ItemOS("Teste", os1, servico1);
         ItemOS itemOS2 = new ItemOS("Teste", os1, servico14);
 
-        os1.add(itemOS1);
-        os1.add(itemOS2);
+//        os1.add(itemOS1);
+//        os1.add(itemOS2);
 
 
         // Associando os cliente aos veiculos
@@ -123,5 +113,10 @@ public class MainApp {
 
         // Posso formatar os valores nos get's?
         print(os1);
+
+        imprimir(pf);
+        imprimir(pj);
+
+
     }
 }
