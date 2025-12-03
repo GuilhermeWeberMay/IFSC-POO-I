@@ -66,13 +66,13 @@ public class MainApp {
         Servico.setPontos(10);
 
 
-        OrdemServico os1 = new OrdemServico(1,10f, EStatus.CANCELADA, veiculo4);
+        OrdemServico os1 = new OrdemServico(1,10f, EStatus.CANCELADA, veiculo2);
 
         ItemOS itemOS1 = new ItemOS("Teste", os1, servico1);
         ItemOS itemOS2 = new ItemOS("Teste", os1, servico14);
 
-//        os1.add(itemOS1);
-//        os1.add(itemOS2);
+        os1.add(itemOS1);
+        os1.add(itemOS2);
 
 
         // Associando os cliente aos veiculos
@@ -84,8 +84,8 @@ public class MainApp {
         // Posso formatar os valores nos get's?
         print(os1);
 
-        imprimir(pf);
-        imprimir(pj);
+//        imprimir(pf);
+//        imprimir(pj);
 
 
     }

@@ -33,10 +33,13 @@ public class OrdemServico {
     }
 
     public double getTotal() throws ExceptionLavacao {
-        if (total == 0){
+        if (total < 0){
             throw new ExceptionLavacao("Não há valor total pois não há serviço vinculado");
         }else {
-            return calcularServico();
+            for (ItemOS itemOS : itensOS) {
+                total += itemOS.getServico().getValor();
+            }
+            return total;
         }
     }
 
@@ -53,7 +56,7 @@ public class OrdemServico {
     }
 
     public double getDesconto() {
-        return desconto / 100;
+        return desconto;
     }
 
     public void setDesconto(double desconto) {
@@ -92,11 +95,7 @@ public class OrdemServico {
         if (itensOS.isEmpty()) {
             throw new ExceptionLavacao("Não há serviços na lista para serem calculados");
         }else{
-            total = 0;
-            for (ItemOS itemOS : itensOS) {
-                total += itemOS.getServico().getValor();
-            }
-            return total -= total * getDesconto();
+            return total -= total * (getDesconto() / 100);
         }
     }
 
