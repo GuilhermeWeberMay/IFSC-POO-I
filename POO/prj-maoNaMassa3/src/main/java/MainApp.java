@@ -2,35 +2,7 @@ import java.time.LocalDate;
 
 public class MainApp {
     public static void print(OrdemServico os) {
-
         System.out.println(ImpressaoOS.imprimirOS(os));
-        // Tudo de acordo com o mnm3
-        System.out.println(os.getNumero());
-        System.out.println(os.getAgenda());
-        System.out.println(os.getStatus());
-        System.out.println(os.getVeiculo().getCliente().getNome());
-        System.out.println(os.getVeiculo().getPlaca());
-        System.out.println(os.getVeiculo().getModelo().getDescricao());
-        System.out.println("========================");
-        try {
-            int nItem = 1;
-            for (ItemOS itemOS : os.getItensOS()) {
-                System.out.println(nItem + " " + itemOS.getServico().getDescricao());
-                System.out.println(itemOS.getServico().getValor());
-                nItem++;
-            }
-        } catch (ExceptionLavacao e) {
-            System.out.println(e.getMessage());
-        }
-
-        try {
-            System.out.println(os.getTotal());
-            System.out.println(os.getDesconto());
-            System.out.println(os.getTotal());
-        } catch (ExceptionLavacao lavacao) {
-            System.out.println(lavacao.getMessage());
-        }
-
     }
 
     public static void print(Veiculo veiculo) {
