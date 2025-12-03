@@ -20,13 +20,12 @@ public class MainApp {
         } catch (ExceptionLavacao e) {
             System.out.println(e.getMessage());
         }
-
         try {
             System.out.println(os.getTotal());
             System.out.println(os.getDesconto());
             System.out.println(os.getTotal());
-        } catch (ExceptionLavacao lavacao) {
-            System.out.println(lavacao.getMessage());
+        }catch (ExceptionLavacao e) {
+            System.out.println(e.getMessage());
         }
 
     }
@@ -112,8 +111,8 @@ public class MainApp {
         ItemOS itemOS1 = new ItemOS("Teste", os1, servico1);
         ItemOS itemOS2 = new ItemOS("Teste", os1, servico14);
 
-//        os1.add(itemOS1);
-//        os1.add(itemOS2);
+        os1.add(itemOS1);
+        os1.add(itemOS2);
 
 
         // Associando os cliente aos veiculos

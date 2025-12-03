@@ -33,10 +33,10 @@ public class OrdemServico {
         this.numero = numero;
     }
 
-    public double getTotal() throws ExceptionLavacao {
-        if (total == 0){
-            throw new ExceptionLavacao("Não há valor total pois não há serviço vinculado");
-        }else {
+    public double getTotal() throws ExceptionLavacao{
+        if(total < 0){
+            throw new ExceptionLavacao("Sei lá");
+        }else{
             return calcularServico();
         }
     }
