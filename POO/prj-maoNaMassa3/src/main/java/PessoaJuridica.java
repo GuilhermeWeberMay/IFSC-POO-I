@@ -4,9 +4,9 @@ public class PessoaJuridica extends Cliente implements IDados{
     private String inscricaoEstadual;
 
     // Construtores
-    public PessoaJuridica(int id, String nome, String celular, String email, String cnpj, String inscricaoEstadual, int pontuacao) {
+    public PessoaJuridica(int id, String nome, String celular, String email, String cnpj, String inscricaoEstadual) {
         // Aqui temos o construtor super que é responsavel por levar os atributos para a classe abstrata
-        super(id, nome, celular, email, pontuacao);
+        super(id, nome, celular, email);
         this.cnpj = cnpj;
         this.inscricaoEstadual = inscricaoEstadual;
     }

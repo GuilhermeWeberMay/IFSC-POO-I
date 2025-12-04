@@ -22,8 +22,8 @@ public class MainApp {
 
         // Instanciacao e sobre carga do objeto Cliente
         PessoaFisica pf = new PessoaFisica(1, "Guilherme", "48 999117218", "gui",
-                "10168481960", 2025, 10, 20, 10);
-        PessoaJuridica pj = new PessoaJuridica(1, "Tela & Decor", "48", "tela", "89", "98", 10);
+                "10168481960", 2025, 10, 20);
+        PessoaJuridica pj = new PessoaJuridica(1, "Tela & Decor", "48", "tela", "89", "98");
 
         // Instanciacao e sobre carga do objeto Marca
         Marca marca = new Marca(1, "Nissan");
@@ -96,12 +96,13 @@ public class MainApp {
 //            for (int i : os1.getItensOS().getLast().getServico().getPontos()){
 //
 //            }
-            System.out.println(os1.getItensOS().getLast().getServico().getPontos());
-        }catch (ExceptionLavacao e){
+            System.out.println(Servico.getPontos());
+        }catch (Exception e){
             System.out.println(e.getMessage());
         }
+        System.out.println(pf.getPontuacao());
 
-        pf.getPontuacao().adicionar(1000);
+        pf.getPontuacao().adicionar(100);
 
         System.out.println(pf.getPontuacao());
 
