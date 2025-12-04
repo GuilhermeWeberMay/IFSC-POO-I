@@ -87,7 +87,13 @@ public class MainApp {
         imprimir(os1);
 
         imprimir(pf);
-//        imprimir(pj);
+
+        try{
+            pf.getPontuacao().subtrair(1000);
+        }
+        catch(ExceptionLavacao e){
+            System.out.println(e.getMessage()+ "\nSeu saldo é: "+pf.getPontuacao());
+        }
 
 
 
