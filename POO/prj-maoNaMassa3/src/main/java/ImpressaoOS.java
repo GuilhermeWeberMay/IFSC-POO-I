@@ -78,7 +78,12 @@ public class ImpressaoOS {
         } catch (ExceptionLavacao e) {
             dados.append(e.getMessage()).append("\n");
         }
-
+        try {
+            dados.append("Pontos gerados: ").append(os.calcularPontos());
+        }
+        catch (ExceptionLavacao e) {
+            dados.append(e.getMessage()).append("\n");
+        }
         return dados.toString();
     }
 }

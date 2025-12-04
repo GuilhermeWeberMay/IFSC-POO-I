@@ -108,13 +108,14 @@ public class OrdemServico {
     }
 
     //Método para calcular os pontos aos clientes
-//    public int calcularPontos() throws ExceptionLavacao {
-//        for (int itemOS : this.getItensOS().getLast().getServico().getPontos()){
-//        }
-//
-//
-//        return
-//    }
+    public int calcularPontos() throws ExceptionLavacao {
+        int pontos = 0;
+        for ( ItemOS itemOS : getItensOS()){
+            pontos += itemOS.getServico().getPontos();
+        }
+        this.getVeiculo().getCliente().getPontuacao().adicionar(pontos);
+        return pontos;
+    }
 
     @Override
     public String toString() {

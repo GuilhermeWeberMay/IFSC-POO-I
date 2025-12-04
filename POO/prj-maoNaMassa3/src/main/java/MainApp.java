@@ -1,5 +1,3 @@
-import java.time.LocalDate;
-
 public class MainApp {
     public static void imprimir (OrdemServico os) {
         System.out.println(ImpressaoOS.imprimirOS(os));
@@ -83,28 +81,17 @@ public class MainApp {
         pj.addVeiculo(veiculo2); // Gabriel tem RS6
         pf.addVeiculo(veiculo3); // Guilherme tem S1000RR
 
-        // Posso formatar os valores nos get's?
+
+        imprimir(pf);
+
         imprimir(os1);
 
-//        imprimir(pf);
+        imprimir(pf);
 //        imprimir(pj);
 
-        // Testando as associações
-        os1.getVeiculo().getModelo().getMotor().getTipoCombustivel().getDescricao();
-        os1.getVeiculo().getCliente().getPontuacao().saldo();
-        try {
-//            for (int i : os1.getItensOS().getLast().getServico().getPontos()){
-//
-//            }
-            System.out.println(Servico.getPontos());
-        }catch (Exception e){
-            System.out.println(e.getMessage());
-        }
-        System.out.println(pf.getPontuacao());
 
-        pf.getPontuacao().adicionar(100);
 
-        System.out.println(pf.getPontuacao());
+
 
 
 
