@@ -76,11 +76,20 @@ public class MainApp {
 
 
         // Associando os cliente aos veiculos
-        pf.addVeiculo(veiculo);  // Guilherme tem Versa
-        pj.addVeiculo(veiculo4); // Gabriel tem S15
-        pj.addVeiculo(veiculo2); // Gabriel tem RS6
-        pf.addVeiculo(veiculo3); // Guilherme tem S1000RR
-
+        try {
+            pf.addVeiculo(veiculo);  // Guilherme tem Versa
+            pj.addVeiculo(veiculo4); // Gabriel tem S15
+            pj.addVeiculo(veiculo2); // Gabriel tem RS6
+            pf.addVeiculo(veiculo3); // Guilherme tem S1000RR
+            pj.addVeiculo(veiculo4);
+        } catch(ExceptionLavacao e) {
+            System.out.println(e.getMessage());
+        }
+        try{
+            pj.removeVeiculo(veiculo);
+        }catch(ExceptionLavacao e) {
+            System.out.println(e.getMessage());
+        }
 
         imprimir(pf);
 

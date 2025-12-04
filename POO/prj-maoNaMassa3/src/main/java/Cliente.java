@@ -66,13 +66,21 @@ public abstract class Cliente implements IDados{ // implements significa que ess
         return pontuacao;
     }
 
-    public void addVeiculo(Veiculo veiculo) {
-        this.listaVeiculos.add(veiculo);
-        veiculo.setCliente(this);
+    public void addVeiculo(Veiculo veiculo) throws ExceptionLavacao {
+        if(listaVeiculos.contains(veiculo)) {
+            throw new ExceptionLavacao("Carro já tem cliente");
+        }else{
+            this.listaVeiculos.add(veiculo);
+            veiculo.setCliente(this);
+        }
     }
-    public void removeVeiculo(Veiculo veiculo) {
-        this.listaVeiculos.remove(veiculo);
-        veiculo.setCliente(null);
+    public void removeVeiculo(Veiculo veiculo) throws ExceptionLavacao {
+        if(!listaVeiculos.contains(veiculo)) {
+            throw new ExceptionLavacao("Carro não está neste  cliente");
+        }else{
+            this.listaVeiculos.remove(veiculo);
+            veiculo.setCliente(null);
+        }
     }
 
     public String apresentaListaCarros(){
