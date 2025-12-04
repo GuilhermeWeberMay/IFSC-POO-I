@@ -7,13 +7,12 @@ public class Relatorio {
         } else {
             dados.append("Dados pessoa fisica\n");
         }
-        dados.append(c.getDados()).append("\n");
-        dados.append("Lista de carros: \n");
+        dados.append(c.getDados());
+        dados.append("Lista de carros: ").append("\n");
         for (Veiculo v : c.getListaVeiculos()) {
-            dados.append(v.getDados()).append("\n");
+            dados.append(v.getDados());
+            dados.append("==============================").append("\n");
         }
-        dados.append(c.getPontuacao()).append("\n");
-        dados.append("\n");
         return dados.toString();
     }
 }

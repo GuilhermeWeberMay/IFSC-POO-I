@@ -99,12 +99,20 @@ public class OrdemServico {
         }
     }
 
-    public void add(ItemOS itemOS) {
-        itensOS.add(itemOS);
+    public void add(ItemOS itemOS) throws ExceptionLavacao{
+        if(itensOS.contains(itemOS)){
+            throw new ExceptionLavacao("Esse serviço já está na ordem de serviço");
+        }else {
+            itensOS.add(itemOS);
+        }
     }
 
-    public void remove(ItemOS itemOS) {
-        itensOS.remove(itemOS);
+    public void remove(ItemOS itemOS) throws  ExceptionLavacao{
+        if(!itensOS.contains(itemOS)){
+            throw new ExceptionLavacao("Esse serviço não está na ordem de serviço");
+        }else {
+            itensOS.add(itemOS);
+        }
     }
 
     //Método para calcular os pontos aos clientes
