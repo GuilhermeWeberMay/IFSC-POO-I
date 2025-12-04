@@ -101,7 +101,7 @@ public class MainApp {
             pf.getPontuacao().subtrair(1000);
         }
         catch(ExceptionLavacao e){
-            System.out.println(e.getMessage()+ "\nSeu saldo é: "+pf.getPontuacao());
+            System.out.println(e.getMessage()+ "\nSeu saldo é: "+pf.getPontuacao().saldo());
         }
 
 
