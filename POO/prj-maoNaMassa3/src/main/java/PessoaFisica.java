@@ -5,9 +5,9 @@ public class PessoaFisica extends Cliente implements IDados { // Extends é a pa
     private LocalDate dataNascimento;
 
     // Construtores
-    public PessoaFisica(int id, String nome, String celular, String email, String cpf, int ano, int mes, int dia) {
+    public PessoaFisica(int id, String nome, String celular, String email, String cpf, int ano, int mes, int dia, int pontuacao) {
         // Na herança o super é a chamado do construtor da classe acima dele, e enviamos os atributos desta classe
-        super(id, nome, celular, email);
+        super(id, nome, celular, email, pontuacao);
         this.cpf = cpf;
         this.dataNascimento = LocalDate.of(ano, mes, dia);
     }

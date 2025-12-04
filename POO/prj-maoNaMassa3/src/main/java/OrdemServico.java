@@ -107,6 +107,15 @@ public class OrdemServico {
         itensOS.remove(itemOS);
     }
 
+    //Método para calcular os pontos aos clientes
+//    public int calcularPontos() throws ExceptionLavacao {
+//        for (int itemOS : this.getItensOS().getLast().getServico().getPontos()){
+//        }
+//
+//
+//        return
+//    }
+
     @Override
     public String toString() {
         return "OrdemServico{" +

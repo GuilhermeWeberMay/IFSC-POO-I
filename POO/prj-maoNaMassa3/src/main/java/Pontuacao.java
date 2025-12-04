@@ -1,6 +1,6 @@
 public class Pontuacao {
     // Atributos
-    private int quantidade = 0;
+    private int quantidade;
 
     // Construtores
     public Pontuacao(int quantidade) {
@@ -12,10 +12,10 @@ public class Pontuacao {
         return quantidade;
     }
     public void subtrair(int quantidade) {
-        quantidade -= quantidade;
+        this.quantidade -= quantidade;
     }
     public void adicionar(int quantidade) {
-        quantidade += quantidade;
+        this.quantidade += quantidade;
     }
 
     @Override

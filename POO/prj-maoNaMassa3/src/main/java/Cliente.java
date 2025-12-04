@@ -11,13 +11,13 @@ public abstract class Cliente implements IDados{ // implements significa que ess
     private List<Veiculo> listaVeiculos =  new ArrayList<>();
     private Pontuacao pontuacao;
 
-    public Cliente(int id, String nome, String celular, String email) {
+    public Cliente(int id, String nome, String celular, String email, int pontuacao) {
         this.id = id;
         this.nome = nome;
         this.celular = celular;
         this.email = email;
         this.dataCadastro = LocalDate.now();
-        this.pontuacao = new Pontuacao(0);
+        this.pontuacao = new Pontuacao(pontuacao);
     }
 
     public int getId() {
