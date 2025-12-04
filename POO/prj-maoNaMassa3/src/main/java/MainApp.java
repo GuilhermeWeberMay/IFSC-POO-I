@@ -3,10 +3,6 @@ public class MainApp {
         System.out.println(ImpressaoOS.imprimirOS(os));
     }
 
-    public static void print(Veiculo veiculo) {
-        System.out.println(veiculo.getDados());
-    }
-
     public static void imprimir (Cliente c) {
         System.out.print(Relatorio.imprimir(c));
     }
