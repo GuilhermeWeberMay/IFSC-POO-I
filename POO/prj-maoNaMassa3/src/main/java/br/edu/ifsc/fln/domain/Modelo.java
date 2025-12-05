@@ -1,11 +1,13 @@
+package br.edu.ifsc.fln.domain;
+
 public class Modelo {
     private int id;
     private String descricao;
-    // Relacionamento uniderional com Marca
+    // Relacionamento uniderional com br.edu.ifsc.fln.domain.Marca
     private Marca marca;
     // Relacionamento uniderional com ECategoria
     ECategoria categoria;
-    // Relacionamento de Agreagção com Motor
+    // Relacionamento de Agreagção com br.edu.ifsc.fln.domain.Motor
     private Motor motor;
 
     public Modelo(int id, String descricao,Marca marca, ECategoria categoria, int potencia, ETipoCombustivel tipoCombustivel) {
@@ -50,7 +52,7 @@ public class Modelo {
 
     @Override
     public String toString() {
-        return "Modelo{" +
+        return "br.edu.ifsc.fln.domain.Modelo{" +
                 "id=" + id +
                 ", descricao='" + descricao + '\'' +
                 ", marca=" + marca +

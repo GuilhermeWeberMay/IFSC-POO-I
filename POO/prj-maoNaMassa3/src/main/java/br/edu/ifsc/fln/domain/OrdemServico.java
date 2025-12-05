@@ -1,3 +1,8 @@
+package br.edu.ifsc.fln.domain;
+
+import br.edu.ifsc.fln.exception.*;
+import br.edu.ifsc.fln.domain.*;
+
 import java.time.LocalDate;
 import java.util.*;
 
@@ -9,7 +14,7 @@ public class OrdemServico {
     private double desconto;
     // Associação Unidirecional com EStatus
     private EStatus status;
-    // Relação de agregação com a classe Veiculo
+    // Relação de agregação com a classe br.edu.ifsc.fln.domain.Veiculo
     private Veiculo veiculo;
     // Classe associativa
     private List<ItemOS> itensOS = new ArrayList<>(); // Isso já garante a composição? Porque?
@@ -127,7 +132,7 @@ public class OrdemServico {
 
     @Override
     public String toString() {
-        return "OrdemServico{" +
+        return "br.edu.ifsc.fln.domain.OrdemServico{" +
                 "veiculo=" + veiculo +
                 ", status=" + status +
                 ", desconto=" + desconto +

@@ -1,3 +1,5 @@
+package br.edu.ifsc.fln.domain;
+
 public class Servico {
     // Atributos
     private int id;
@@ -54,7 +56,7 @@ public class Servico {
 
     @Override
     public String toString() {
-        return "Servico{" +
+        return "br.edu.ifsc.fln.domain.Servico{" +
                 "id=" + id +
                 ", descricao='" + descricao + '\'' +
                 ", valor=" + valor +

@@ -1,3 +1,5 @@
+package br.edu.ifsc.fln.domain;
+
 import java.time.LocalDate;
 public class PessoaFisica extends Cliente implements IDados { // Extends é a palavra servada para herança
     // Atributos
@@ -46,7 +48,7 @@ public class PessoaFisica extends Cliente implements IDados { // Extends é a pa
 
     @Override
     public String toString() {
-        return "PessoaFisica{" +
+        return "br.edu.ifsc.fln.domain.PessoaFisica{" +
                 super.toString() +
                 "cpf='" + cpf + '\'' +
                 ", dataNascimento=" + dataNascimento +

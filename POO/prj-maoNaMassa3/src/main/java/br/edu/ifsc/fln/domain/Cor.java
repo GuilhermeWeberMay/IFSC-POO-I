@@ -1,3 +1,5 @@
+package br.edu.ifsc.fln.domain;
+
 public class Cor {
     private int id;
     private String nome;

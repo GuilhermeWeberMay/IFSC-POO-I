@@ -1,3 +1,5 @@
+package br.edu.ifsc.fln.report;
+import br.edu.ifsc.fln.domain.*;
 public class Relatorio {
     public static String imprimir (Cliente c) {
         StringBuilder dados = new StringBuilder();

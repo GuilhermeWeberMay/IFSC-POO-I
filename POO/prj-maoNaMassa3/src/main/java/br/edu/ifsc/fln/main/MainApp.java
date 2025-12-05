@@ -1,3 +1,9 @@
+package br.edu.ifsc.fln.main;
+
+import br.edu.ifsc.fln.report.*;
+import br.edu.ifsc.fln.domain.*;
+import br.edu.ifsc.fln.exception.*;
+
 public class MainApp {
     public static void imprimir (OrdemServico os) {
         System.out.println(ImpressaoOS.imprimirOS(os));
@@ -19,19 +25,19 @@ public class MainApp {
         PessoaJuridica pj = new PessoaJuridica(1, "Tela & Decor", "48991550957", "contato@telaedecor.com",
                 "10820608000116", "608000116");
 
-        // Instanciacao e sobre carga do objeto Marca
+        // Instanciacao e sobre carga do objeto br.edu.ifsc.fln.domain.Marca
         Marca marca = new Marca(1, "Nissan");
         Marca marca2 = new Marca(2, "Hyundai");
         Marca marca3 = new Marca(3, "Renault");
         Marca marca4 = new Marca(4, "BMW");
 
-        // Instanciacao e sobre carga do objeto Modelo
+        // Instanciacao e sobre carga do objeto br.edu.ifsc.fln.domain.Modelo
         Modelo modelo = new Modelo(1, "Versa", marca, ECategoria.MEDIO, 110, ETipoCombustivel.GALOSINA);
         Modelo modelo2 = new Modelo(2, "HB20", marca2, ECategoria.PADRAO, 250, ETipoCombustivel.FLEX);
         Modelo modelo3 = new Modelo(3, "Sandero-Stepway", marca3, ECategoria.GRANDE, 630, ETipoCombustivel.GNV);
         Modelo modelo4 = new Modelo(4, "S1000RR", marca4, ECategoria.MOTO, 210, ETipoCombustivel.ETANOL);
 
-        // Instanciacao e sobre carga do objeto Veiculo
+        // Instanciacao e sobre carga do objeto br.edu.ifsc.fln.domain.Veiculo
         Veiculo veiculo = new Veiculo(1, "SSF4B18", "Nissan Versa", cor2, modelo);
         Veiculo veiculo2 = new Veiculo(2, "GXP7D88", "Hyundai HB20", cor2, modelo2);
         Veiculo veiculo3 = new Veiculo(3, "WDC8J14", "Renault Sandero-Stepway", cor3, modelo3);
@@ -92,13 +98,13 @@ public class MainApp {
 
         // INICIO - Funcionamento da EXCEPTIONLAVACAO
 
-        // Exception OrdemServico - Inserção
+        // Exception br.edu.ifsc.fln.domain.OrdemServico - Inserção
         try{
             os1.add(itemOS1);
         } catch(ExceptionLavacao e) {
             System.err.println(e.getMessage());
         }
-        // Exception OrdemServico - Remoção
+        // Exception br.edu.ifsc.fln.domain.OrdemServico - Remoção
         try{
             os1.remove(itemOS3);
         } catch(ExceptionLavacao e) {

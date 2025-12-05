@@ -1,3 +1,5 @@
+package br.edu.ifsc.fln.domain;
+
 public class Motor {
     private int potencia;
     // Relacionamento Unidirecional com ETipoCombustivel
@@ -28,7 +30,7 @@ public class Motor {
     // Método de apresentação do objeto - Reescreve o método toString();
     @Override
     public String toString() {
-        return "Motor{" +
+        return "br.edu.ifsc.fln.domain.Motor{" +
                 "potencia=" + potencia +
                 ", tipoCombustivel=" + tipoCombustivel +
                 '}';

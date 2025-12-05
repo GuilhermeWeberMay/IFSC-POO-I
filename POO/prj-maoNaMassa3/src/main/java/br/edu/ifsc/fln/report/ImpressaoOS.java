@@ -1,3 +1,8 @@
+package br.edu.ifsc.fln.report;
+
+import br.edu.ifsc.fln.domain.*;
+import br.edu.ifsc.fln.exception.*;
+
 public class ImpressaoOS {
 
     public static String imprimirOS(OrdemServico os) {

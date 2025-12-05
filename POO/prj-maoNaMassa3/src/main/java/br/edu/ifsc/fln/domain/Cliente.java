@@ -1,8 +1,11 @@
+package br.edu.ifsc.fln.domain;
+
+import br.edu.ifsc.fln.exception.ExceptionLavacao;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
-public abstract class Cliente implements IDados{ // implements significa que essa classe tera um contrato com a interface
+public abstract class Cliente implements IDados { // implements significa que essa classe tera um contrato com a interface
     int id;
     String nome;
     String celular;

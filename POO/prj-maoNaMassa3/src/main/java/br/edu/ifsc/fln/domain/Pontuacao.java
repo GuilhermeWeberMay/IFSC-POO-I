@@ -1,3 +1,7 @@
+package br.edu.ifsc.fln.domain;
+
+import br.edu.ifsc.fln.exception.ExceptionLavacao;
+
 public class Pontuacao {
     // Atributos
     private int quantidade;
@@ -24,7 +28,7 @@ public class Pontuacao {
 
     @Override
     public String toString() {
-        return "Pontuacao: " +
+        return "br.edu.ifsc.fln.domain.Pontuacao: " +
                 quantidade;
     }
 }

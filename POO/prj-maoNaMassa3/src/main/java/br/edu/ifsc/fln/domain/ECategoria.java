@@ -1,3 +1,5 @@
+package br.edu.ifsc.fln.domain;
+
 public enum ECategoria {
     PEQUENO("Pequeno"), MEDIO("Médio"), GRANDE("Grande"), MOTO("Moto"), PADRAO("Padrão");
     private String descricao;

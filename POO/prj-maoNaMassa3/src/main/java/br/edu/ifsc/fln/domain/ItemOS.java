@@ -1,3 +1,5 @@
+package br.edu.ifsc.fln.domain;
+
 public class ItemOS {
     private double valorServico;
     private String observacoes;
@@ -46,7 +48,7 @@ public class ItemOS {
 
     @Override
     public String toString() {
-        return "ItemOS{" +
+        return "br.edu.ifsc.fln.domain.ItemOS{" +
                 "valorServico=" + valorServico +
                 ", observacoes='" + observacoes + '\'' +
                 ", ordemServico=" + ordemServico +

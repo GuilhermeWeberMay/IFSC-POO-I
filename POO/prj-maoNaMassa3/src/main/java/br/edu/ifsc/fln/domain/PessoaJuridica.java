@@ -1,3 +1,5 @@
+package br.edu.ifsc.fln.domain;
+
 public class PessoaJuridica extends Cliente implements IDados{
     // Atributos
     private String cnpj;
@@ -44,7 +46,7 @@ public class PessoaJuridica extends Cliente implements IDados{
 
     @Override
     public String toString() {
-        return "PessoaJuridica{" +
+        return "br.edu.ifsc.fln.domain.PessoaJuridica{" +
                 super.toString() +
                 "cnpj='" + cnpj + '\'' +
                 ", inscricaoEstadual='" + inscricaoEstadual + '\'' +

@@ -1,3 +1,5 @@
+package br.edu.ifsc.fln.domain;
+
 public enum EStatus {
     ABERTA("Aberta"), FECHADA("Fechada"),CANCELADA("Cancelada");
     private String descricao;
