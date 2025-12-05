@@ -60,7 +60,7 @@ public class MainApp {
         Servico.setPontos(10);
 
 
-        OrdemServico os1 = new OrdemServico(1,10f, EStatus.ABERTA, veiculo3);
+        OrdemServico os1 = new OrdemServico(1,10f, EStatus.ABERTA, veiculo4);
 
         ItemOS itemOS1 = new ItemOS("", os1, servico1);
         ItemOS itemOS2 = new ItemOS("", os1, servico14);
@@ -82,7 +82,7 @@ public class MainApp {
         } catch(ExceptionLavacao e) {
             System.err.println(e.getMessage());
         }
-        
+
         imprimir(pf);
 
         imprimir(os1);
