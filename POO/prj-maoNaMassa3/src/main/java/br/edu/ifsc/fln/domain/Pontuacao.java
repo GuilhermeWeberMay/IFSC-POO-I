@@ -28,7 +28,7 @@ public class Pontuacao {
 
     @Override
     public String toString() {
-        return "br.edu.ifsc.fln.domain.Pontuacao: " +
+        return "Pontuacao: " +
                 quantidade;
     }
 }

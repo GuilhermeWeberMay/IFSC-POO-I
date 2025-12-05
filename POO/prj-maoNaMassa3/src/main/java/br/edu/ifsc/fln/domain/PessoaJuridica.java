@@ -46,7 +46,7 @@ public class PessoaJuridica extends Cliente implements IDados{
 
     @Override
     public String toString() {
-        return "br.edu.ifsc.fln.domain.PessoaJuridica{" +
+        return "PessoaJuridica{" +
                 super.toString() +
                 "cnpj='" + cnpj + '\'' +
                 ", inscricaoEstadual='" + inscricaoEstadual + '\'' +

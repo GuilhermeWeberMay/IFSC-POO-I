@@ -56,7 +56,7 @@ public class Servico {
 
     @Override
     public String toString() {
-        return "br.edu.ifsc.fln.domain.Servico{" +
+        return "Servico{" +
                 "id=" + id +
                 ", descricao='" + descricao + '\'' +
                 ", valor=" + valor +

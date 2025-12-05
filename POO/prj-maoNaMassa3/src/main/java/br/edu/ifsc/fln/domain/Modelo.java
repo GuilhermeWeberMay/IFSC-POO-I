@@ -52,7 +52,7 @@ public class Modelo {
 
     @Override
     public String toString() {
-        return "br.edu.ifsc.fln.domain.Modelo{" +
+        return "Modelo{" +
                 "id=" + id +
                 ", descricao='" + descricao + '\'' +
                 ", marca=" + marca +

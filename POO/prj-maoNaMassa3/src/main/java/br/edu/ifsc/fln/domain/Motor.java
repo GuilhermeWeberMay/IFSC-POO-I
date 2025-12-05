@@ -30,7 +30,7 @@ public class Motor {
     // Método de apresentação do objeto - Reescreve o método toString();
     @Override
     public String toString() {
-        return "br.edu.ifsc.fln.domain.Motor{" +
+        return "Motor{" +
                 "potencia=" + potencia +
                 ", tipoCombustivel=" + tipoCombustivel +
                 '}';

@@ -48,7 +48,7 @@ public class ItemOS {
 
     @Override
     public String toString() {
-        return "br.edu.ifsc.fln.domain.ItemOS{" +
+        return "ItemOS{" +
                 "valorServico=" + valorServico +
                 ", observacoes='" + observacoes + '\'' +
                 ", ordemServico=" + ordemServico +

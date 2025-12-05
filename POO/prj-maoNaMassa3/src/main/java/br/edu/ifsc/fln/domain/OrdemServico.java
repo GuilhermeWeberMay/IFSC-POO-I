@@ -132,7 +132,7 @@ public class OrdemServico {
 
     @Override
     public String toString() {
-        return "br.edu.ifsc.fln.domain.OrdemServico{" +
+        return "OrdemServico{" +
                 "veiculo=" + veiculo +
                 ", status=" + status +
                 ", desconto=" + desconto +

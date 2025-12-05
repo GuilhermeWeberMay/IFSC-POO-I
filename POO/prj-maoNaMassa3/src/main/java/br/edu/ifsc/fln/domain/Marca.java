@@ -32,7 +32,7 @@ public class Marca {
     // Método de apresentação do objeto - Reescreve o método toString();
     @Override
     public String toString() {
-        return "br.edu.ifsc.fln.domain.Marca{" +
+        return "Marca{" +
                 "id=" + id +
                 ", nome='" + nome + '\'' +
                 '}';

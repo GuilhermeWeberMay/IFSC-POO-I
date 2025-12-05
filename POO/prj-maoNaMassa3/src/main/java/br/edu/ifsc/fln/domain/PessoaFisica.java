@@ -48,7 +48,7 @@ public class PessoaFisica extends Cliente implements IDados { // Extends é a pa
 
     @Override
     public String toString() {
-        return "br.edu.ifsc.fln.domain.PessoaFisica{" +
+        return "PessoaFisica{" +
                 super.toString() +
                 "cpf='" + cpf + '\'' +
                 ", dataNascimento=" + dataNascimento +
