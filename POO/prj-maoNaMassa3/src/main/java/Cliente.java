@@ -76,7 +76,7 @@ public abstract class Cliente implements IDados{ // implements significa que ess
     }
     public void removeVeiculo(Veiculo veiculo) throws ExceptionLavacao {
         if(!listaVeiculos.contains(veiculo)) {
-            throw new ExceptionLavacao("Carro não está neste  cliente");
+            throw new ExceptionLavacao("Carro não está neste cliente");
         }else{
             this.listaVeiculos.remove(veiculo);
             veiculo.setCliente(null);
@@ -99,7 +99,7 @@ public abstract class Cliente implements IDados{ // implements significa que ess
         info.append("Celular...........: ").append(celular).append("\n");
         info.append("Email.............: ").append(email).append("\n");
         info.append("Data de cadastro..: ").append(dataCadastro).append("\n");
-        info.append("Pontuacao.........: ").append(pontuacao).append("\n");
+        info.append("Pontuacao.........: ").append(getPontuacao().saldo()).append("\n");
         return info.toString();
     }
     public String getDados(String observacao){

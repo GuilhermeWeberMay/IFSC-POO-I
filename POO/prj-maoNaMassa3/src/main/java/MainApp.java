@@ -60,15 +60,14 @@ public class MainApp {
         Servico.setPontos(10);
 
 
-        OrdemServico os1 = new OrdemServico(1,10f, EStatus.ABERTA, veiculo);
+        OrdemServico os1 = new OrdemServico(1,10f, EStatus.ABERTA, veiculo3);
 
-        ItemOS itemOS1 = new ItemOS("Teste", os1, servico1);
-        ItemOS itemOS2 = new ItemOS("Teste", os1, servico14);
-        ItemOS itemOS3 = new ItemOS("Teste", os1, servico8);
+        ItemOS itemOS1 = new ItemOS("", os1, servico1);
+        ItemOS itemOS2 = new ItemOS("", os1, servico14);
+        ItemOS itemOS3 = new ItemOS("", os1, servico8);
         try {
             os1.add(itemOS1);
             os1.add(itemOS2);
-            os1.add(itemOS3);
         }
         catch (ExceptionLavacao e){
             System.err.println(e.getMessage());
@@ -77,33 +76,58 @@ public class MainApp {
         // Associando os cliente aos veiculos
         try {
             pf.addVeiculo(veiculo);  // Guilherme tem Versa
-            pj.addVeiculo(veiculo4); // Gabriel tem S15
-            pj.addVeiculo(veiculo2); // Gabriel tem RS6
-            pf.addVeiculo(veiculo3); // Guilherme tem S1000RR
-            pj.addVeiculo(veiculo4);
+            pj.addVeiculo(veiculo2); // Tela e Decor tem Hyundai HB20
+            pj.addVeiculo(veiculo3); // Tela e Decor tem Renault Sandero-Stepway
+            pf.addVeiculo(veiculo4); // Guilherme tem S1000RR
         } catch(ExceptionLavacao e) {
             System.err.println(e.getMessage());
         }
+        
+        imprimir(pf);
+
+        imprimir(os1);
+
+        imprimir(pf);
+
+
+        // INICIO - Funcionamento da EXCEPTIONLAVACAO
+
+        // Exception OrdemServico - Inserção
+        try{
+            os1.add(itemOS1);
+        } catch(ExceptionLavacao e) {
+            System.err.println(e.getMessage());
+        }
+        // Exception OrdemServico - Remoção
+        try{
+            os1.remove(itemOS3);
+        } catch(ExceptionLavacao e) {
+            System.err.println(e.getMessage());
+        }
+
+        // Exception Cliente - Inserção
+        try{
+            pj.addVeiculo(veiculo4);
+        }catch(ExceptionLavacao e){
+            System.err.println(e.getMessage());
+        }
+        // Exception Cliente - Remoção
         try{
             pj.removeVeiculo(veiculo);
         }catch(ExceptionLavacao e) {
             System.err.println(e.getMessage());
         }
 
+        // Exception Pontuação - Remoção
         try{
             pf.getPontuacao().subtrair(1000);
         }
         catch(ExceptionLavacao e){
-            System.err.println(e.getMessage()+ "\nSeu saldo é: "+pf.getPontuacao().saldo());
+            System.err.println(e.getMessage());
+            System.err.println("Seu saldo é: "+pf.getPontuacao().saldo());
         }
 
-        // Colocar onde esta o polimorfismo no imprimir relatório - fazer dois imprimir - formatar eles descentemente
-        imprimir(pf);
-
-        imprimir(os1);
-
-
-
+        // FIM - Funcionamento da EXCEPTIONLAVACAO
 
 
 

@@ -8,10 +8,10 @@ public class Relatorio {
             dados.append("Dados pessoa fisica\n");
         }
         dados.append(c.getDados());
-        dados.append("Lista de carros: ").append("\n");
+        dados.append("\nLista de carros: ").append("\n");
         for (Veiculo v : c.getListaVeiculos()) {
             dados.append(v.getDados());
-            dados.append("==============================").append("\n");
+            dados.append("==============================").append("\n\n");
         }
         return dados.toString();
     }

@@ -3,9 +3,14 @@ public class ImpressaoOS {
     public static String imprimirOS(OrdemServico os) {
 
         StringBuilder dados = new StringBuilder();
+
+        dados.append("============================================================\n");
+        dados.append("                        CUPOM FISCAL                        \n");
+        dados.append("============================================================\n");
+
         dados.append(
                 String.format(
-                        "Número: %-6d dia: %-12s status: %s\n",
+                        "Número: %-6d Dia: %-12s Status: %s\n",
                         os.getNumero(),
                         os.getAgenda(),
                         os.getStatus()
@@ -78,12 +83,20 @@ public class ImpressaoOS {
         } catch (ExceptionLavacao e) {
             dados.append(e.getMessage()).append("\n");
         }
+
+        // >>>>>>> PONTOS GERADOS FORMATADOS <<<<<<<<
         try {
-            dados.append("Pontos gerados: ").append(os.calcularPontos());
+            dados.append(
+                    String.format("%-20s %30d\n",
+                            "PONTOS GERADOS",
+                            os.calcularPontos()
+                    )
+            );
         }
         catch (ExceptionLavacao e) {
             dados.append(e.getMessage()).append("\n");
         }
+
         return dados.toString();
     }
 }
